@@ -189,47 +189,6 @@ function Main() {
             </div>
           </div>
         </div>
-        <div className="contents content3">
-          <div className="wrap">
-            <div className="col3">
-              <div className="title">
-                CNFT
-                <br />
-                for Charity
-              </div>
-            </div>
-            <div className="col4">
-              <div className="collection">
-                <div className="collectionImg">
-                  {/* <div className="soldOut"></div>
-                  <div className="closed" style={{ display: "block" }}></div> */}
-                  <img src="/img/gold.png" alt="Gold" />
-                </div>
-                <div className="text bold">Gold</div>
-              </div>
-            </div>
-            <div className="col4">
-              <div className="collection">
-                <div className="collectionImg">
-                  {/* <div className="soldOut" style={{ display: "block" }}></div>
-                  <div className="closed"></div> */}
-                  <img src="/img/silver.png" alt="Silver" />
-                </div>
-                <div className="text bold">Silver</div>
-              </div>
-            </div>
-            <div className="col4">
-              <div className="collection">
-                <div className="collectionImg">
-                  <div className="soldOut"></div>
-                  <div className="closed"></div>
-                  <img src="/img/bronze.png" alt="Bronze" />
-                </div>
-                <div className="text bold">Bronze</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -34,6 +34,12 @@ function Index() {
           Be a member of this village. <br />
           Oh, there's our Charles. <br />
           Let's create a peaceful Cardano CNFT village.
+          <br />
+          <br />
+          <span>Policy ID</span>
+          <br />
+          2c763e2db8337324df122fffa38e0d97ecdf53d139025a0e1b6d6b97
+          <br />
         </div>
       </div>
       <div className="wrapGreen">
@@ -58,41 +64,36 @@ function Index() {
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/village1.png" alt="card" />
+                  <img src="/img/CardanoVillageex1.png" alt="card" />
                 </div>
-                <div className="cardName">Card Name</div>
               </button>
             </div>
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/village2.png" alt="card" />
+                  <img src="/img/CardanoVillageex2.png" alt="card" />
                 </div>
-                <div className="cardName">Card Name</div>
               </button>
             </div>
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/village3.png" alt="card" />
+                  <img src="/img/CardanoVillageex3.png" alt="card" />
                 </div>
-                <div className="cardName">Card NameCard Name</div>
               </button>
             </div>
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/village4.png" alt="card" />
+                  <img src="/img/CardanoVillageex4.png" alt="card" />
                 </div>
-                <div className="cardName">Card Name</div>
               </button>
             </div>
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/village5.png" alt="card" />
+                  <img src="/img/CardanoVillageex5.png" alt="card" />
                 </div>
-                <div className="cardName">Card Name</div>
               </button>
             </div>
           </div>
