@@ -6,6 +6,7 @@ import ReactGA from "react-ga";
 
 import Header from "./screens/frame/Header";
 import Main from "./screens/Main";
+import Index from "./screens/Index";
 import Guide from "./screens/Guide";
 import Footer from "./screens/frame/Footer";
 
@@ -17,9 +18,9 @@ function App() {
   return (
     <BrowserRouter>
       <RecoilRoot>
-        <Header />
+        {/* <Header /> */}
         {isIE || isEdge ? alert("IE / Edge is not supported. Download Chrome/Opera/Firefox") : null}
-        <Route exact path="/" component={Main} />
+        <Route exact path="/" component={Index} />
         <Route path="/Guide" component={Guide} />
         <Footer />
       </RecoilRoot>

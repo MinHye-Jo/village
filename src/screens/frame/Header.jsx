@@ -16,15 +16,10 @@ function Header() {
       <div className="headerInner">
         <div className="logo">
           <h1>
-            <a href="/">
-              <div className="logoImg"></div>
-              <div className="logoText">
-                Save The Children <span>CNFT</span>
-              </div>
-            </a>
+            <a href="/"></a>
           </h1>
         </div>
-        <div className="headerRight">
+        {/* <div className="headerRight">
           <div className="lnb pcNav">
             <div className="sns twitter">
               <a href="https://twitter.com/KmonsterCNFT" target="_blank" rel="noreferrer"></a>
@@ -57,7 +52,7 @@ function Header() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );
