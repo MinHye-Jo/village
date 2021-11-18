@@ -4,6 +4,7 @@
   min-width: 280px;
   height: 700px;
   overflow: hidden;
+  background: -o-linear-gradient(150deg, #103a69, #678cc9, #75ccff);
   background: linear-gradient(300deg, #103a69, #678cc9, #75ccff);
   position: relative;
   .mainBg {
@@ -13,14 +14,27 @@
     background: url(../img/mainImgBg.png) bottom no-repeat;
     background-size: cover;
     position: relative;
+    -webkit-animation: ani 2.5s infinite alternate;
     animation: ani 2.5s infinite alternate;
     z-index: 12;
   }
-  @keyframes ani {
+  @-webkit-keyframes ani {
     0% {
+      -webkit-transform: translate(0, 0);
       transform: translate(0, 0);
     }
     100% {
+      -webkit-transform: translate(0px, -10px);
+      transform: translate(0px, -10px);
+    }
+  }
+  @keyframes ani {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    100% {
+      -webkit-transform: translate(0px, -10px);
       transform: translate(0px, -10px);
     }
   }
@@ -32,14 +46,27 @@
     position: absolute;
     top: 0;
     left: 40px;
+    -webkit-animation: aniLeft 2s infinite alternate;
     animation: aniLeft 2s infinite alternate;
     z-index: 10;
   }
-  @keyframes aniLeft {
+  @-webkit-keyframes aniLeft {
     0% {
+      -webkit-transform: translate(0, 0);
       transform: translate(0, 0);
     }
     100% {
+      -webkit-transform: translate(0px, 10px);
+      transform: translate(0px, 10px);
+    }
+  }
+  @keyframes aniLeft {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    100% {
+      -webkit-transform: translate(0px, 10px);
       transform: translate(0px, 10px);
     }
   }
@@ -51,14 +78,27 @@
     position: absolute;
     top: 0;
     right: 40px;
+    -webkit-animation: aniRight 1.5s infinite alternate;
     animation: aniRight 1.5s infinite alternate;
     z-index: 9;
   }
-  @keyframes aniRight {
+  @-webkit-keyframes aniRight {
     0% {
+      -webkit-transform: translate(0, 5px);
       transform: translate(0, 5px);
     }
     100% {
+      -webkit-transform: translate(0px, 0);
+      transform: translate(0px, 0);
+    }
+  }
+  @keyframes aniRight {
+    0% {
+      -webkit-transform: translate(0, 5px);
+      transform: translate(0, 5px);
+    }
+    100% {
+      -webkit-transform: translate(0px, 0);
       transform: translate(0px, 0);
     }
   }
@@ -73,6 +113,8 @@
     position: absolute;
     top: 45%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 10;
   }
@@ -122,18 +164,23 @@
     font-weight: 700;
     letter-spacing: -0.025em;
     font-size: 40px;
+    line-height: 40px;
     margin-bottom: 20px;
     margin-top: 60px;
     word-break: keep-all;
+    span {
+      font-size: 26px;
+    }
   }
   .contnetsText {
     width: 100%;
     text-align: center;
-    color: #888;
+    color: #222;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    word-break: break-all;
+    line-height: 21px;
+    word-break: keep-all;
     span {
       font-weight: 700;
       font-size: 14px;
@@ -196,6 +243,7 @@
     -webkit-transition: all 0.15s ease-in-out;
     -o-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
+    -webkit-box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
     box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
   }
   .cardImg {
@@ -215,11 +263,15 @@
     color: #81b49e;
     white-space: nowrap;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
   }
 }
 .cardArea:hover button {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
   transform: scale(1.02);
+  -webkit-box-shadow: 0px 0px 20px rgba(129, 180, 158, 0.5);
   box-shadow: 0px 0px 20px rgba(129, 180, 158, 0.5);
 }
 .cardArea:hover button {
@@ -257,6 +309,8 @@
       top: 50px;
       left: 0;
       width: 100%;
+      -webkit-transform: translate(0);
+      -ms-transform: translate(0);
       transform: translate(0);
     }
     .mainImgRight {
@@ -294,9 +348,14 @@
     .contentsTitle {
       margin-top: 20px;
       font-size: 30px;
+      line-height: 30px;
+      span {
+        font-size: 20px;
+      }
     }
     .contnetsText {
       font-size: 14px;
+      line-height: 18px;
     }
   }
   .cardArea .cardName {

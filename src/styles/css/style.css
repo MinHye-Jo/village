@@ -62,6 +62,15 @@ textarea:focus {
   outline: none;
   border: none;
 }
+::-moz-selection {
+  background: #81b49e;
+  color: #fff;
+}
+::selection {
+  background: #81b49e;
+  color: #fff;
+}
+
 /* header style */
 .headerWrap {
   width: 100%;

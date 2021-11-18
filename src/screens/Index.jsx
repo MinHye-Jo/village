@@ -11,13 +11,9 @@ function Index() {
             <br />
             <span>Cardano</span>Village
             <div className="mainText">
-              Create, explore and trade in the
+              Metaverse came to Cardano.
               <br />
-              first-ever Cardano virtual world
-              <br />
-              owned by its users.
-              <br />
-              Our village is coming!
+              Enjoy and explore this world.
             </div>
           </div>
         </div>
@@ -28,34 +24,34 @@ function Index() {
         </div>
       </div>
       <div className="contentsWrap">
-        <div className="contentsTitle">Welcome to our village!</div>
+        <div className="contentsTitle">
+          <span> Welcome to </span>
+          <br />
+          Cardano Village
+        </div>
         <div className="contnetsText">
-          The real universe comes to Cardano.
-          <br />
-          We issue the results of shooting real space, not graphics, to CNFT.
-          <br />
-          Our CNFT has a rarity.
-          <br />
-          Own a universe that no one can own.
-          <br />
-          <br />
-          <span>CNFT PolicyID</span>
-          <br />
-          2c763e2db8337324df122fffa38e0d97ecdf53d139025a0e1b6d6b97
+          We make Cardano Village. <br />
+          Be a member of this village. <br />
+          Oh, there's our Charles. <br />
+          Let's create a peaceful Cardano CNFT village.
         </div>
       </div>
       <div className="wrapGreen">
         <div className="greenLine" />
         <div className="contentsWrap">
-          <div className="contentsTitle">Introducing our village!</div>
+          <div className="contentsTitle">
+            <span>Introducing</span>
+            <br />
+            Cardano Village
+          </div>
           <div className="contnetsText">
-            The real universe comes to Cardano.
+            There is no same house in Cardano Village.
             <br />
-            We issue the results of shooting real space, not graphics, to CNFT.
+            Own a house only for you here.
             <br />
-            Our CNFT has a rarity.
+            Make up a village and a continent.
             <br />
-            Own a universe that no one can own.
+            This world is a metaverse in Cardano.
             <br />
           </div>
           <div className="wrapCard">
