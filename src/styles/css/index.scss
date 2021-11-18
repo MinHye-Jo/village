@@ -159,7 +159,7 @@
   .contentsTitle {
     width: 100%;
     text-align: center;
-    color: #222;
+    color: #11aa8b;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     letter-spacing: -0.025em;
@@ -267,15 +267,14 @@
     text-overflow: ellipsis;
   }
 }
-.cardArea:hover button {
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-  -webkit-box-shadow: 0px 0px 20px rgba(129, 180, 158, 0.5);
-  box-shadow: 0px 0px 20px rgba(129, 180, 158, 0.5);
-}
-.cardArea:hover button {
-}
+// .cardArea:hover button {
+//   -webkit-transform: scale(1.02);
+//   -ms-transform: scale(1.02);
+//   transform: scale(1.02);
+//   -webkit-box-shadow: 0px 0px 20px rgba(129, 180, 158, 0.5);
+//   box-shadow: 0px 0px 20px rgba(129, 180, 158, 0.5);
+// }
+
 @media all and (max-width: 1800px) {
   .main {
     .mainImgLeft {
