@@ -1,5 +1,5 @@
 {
-  "name": "v1-charity-web",
+  "name": "v1-village-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -26,7 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy": "npm run build && aws s3 sync ./build s3://cnft-donation.io --acl public-read && aws cloudfront create-invalidation --distribution-id E1J07DPYH5E8ZA --paths \"/index.html\" \"/static/js/*\""
+    "deploy": "npm run build && aws s3 sync ./build s3://cardanovillage.io --acl public-read && aws cloudfront create-invalidation --distribution-id E32R6FYR17WX2F --paths \"/index.html\" \"/static/js/*\""
   },
   "eslintConfig": {
     "extends": [

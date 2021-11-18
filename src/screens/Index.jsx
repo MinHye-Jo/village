@@ -58,7 +58,7 @@ function Index() {
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/cardImg1.jpg" alt="card" />
+                  <img src="/img/village1.png" alt="card" />
                 </div>
                 <div className="cardName">Card Name</div>
               </button>
@@ -66,7 +66,7 @@ function Index() {
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/cardImg1.jpg" alt="card" />
+                  <img src="/img/village2.png" alt="card" />
                 </div>
                 <div className="cardName">Card Name</div>
               </button>
@@ -74,7 +74,7 @@ function Index() {
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/cardImg1.jpg" alt="card" />
+                  <img src="/img/village3.png" alt="card" />
                 </div>
                 <div className="cardName">Card NameCard Name</div>
               </button>
@@ -82,7 +82,7 @@ function Index() {
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/cardImg1.jpg" alt="card" />
+                  <img src="/img/village4.png" alt="card" />
                 </div>
                 <div className="cardName">Card Name</div>
               </button>
@@ -90,7 +90,7 @@ function Index() {
             <div className="cardArea">
               <button>
                 <div className="cardImg">
-                  <img src="/img/cardImg1.jpg" alt="card" />
+                  <img src="/img/village5.png" alt="card" />
                 </div>
                 <div className="cardName">Card Name</div>
               </button>

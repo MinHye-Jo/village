@@ -11,7 +11,7 @@ import Guide from "./screens/Guide";
 import Footer from "./screens/frame/Footer";
 
 function App() {
-  ReactGA.initialize("UA-210229720-1");
+  ReactGA.initialize("UA-213354172-1");
   ReactGA.set({ page: window.location.pathname });
   ReactGA.pageview(window.location.pathname + window.location.search);
 
