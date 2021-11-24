@@ -8,6 +8,7 @@ import Header from "./screens/frame/Header";
 import Main from "./screens/Main";
 import Index from "./screens/Index";
 import Guide from "./screens/Guide";
+import Roadmap from "./screens/Roadmap";
 import ComingSoon from "./screens/ComingSoon";
 import Footer from "./screens/frame/Footer";
 
@@ -23,6 +24,7 @@ function App() {
         {isIE || isEdge ? alert("IE / Edge is not supported. Download Chrome/Opera/Firefox") : null}
         <Route exact path="/" component={Index} />
         <Route path="/Guide" component={Guide} />
+        <Route path="/Roadmap" component={Roadmap} />
         <Route path="/ComingSoon" component={ComingSoon} />
         <Footer />
       </RecoilRoot>

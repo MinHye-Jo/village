@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import "../../styles/css/style.css";
 import "../../styles/css/header.scss";
-import { languageState } from "../../store/app";
-import { useRecoilState } from "recoil";
 
 function Header() {
   // 서브메뉴 제어
@@ -31,7 +29,7 @@ function Header() {
   };
 
   return (
-    <header className={ScrollY > 0 ? "headerActive" : "headerWrap"}>
+    <header className={ScrollY > 0 ? "headerWrap headerActive" : "headerWrap"}>
       <div className="headerBox">
         <div className="logoArea">
           <button onClick={() => (window.location.href = "/")}>
@@ -48,7 +46,7 @@ function Header() {
             <div className="lnbBorder" />
             <div className="submenu">
               <button onClick={() => (window.location.href = "/comingSoon")}>About Project</button>
-              <button onClick={() => (window.location.href = "/comingSoon")}>Road Map</button>
+              <button onClick={() => (window.location.href = "/roadmap")}>Road Map</button>
               <button onClick={() => (window.location.href = "/comingSoon")}>Team Member</button>
             </div>
           </button>
@@ -95,7 +93,7 @@ function Header() {
                   <button className="subLnb" onClick={() => (window.location.href = "/comingSoon")}>
                     About Project
                   </button>
-                  <button className="subLnb" onClick={() => (window.location.href = "/comingSoon")}>
+                  <button className="subLnb" onClick={() => (window.location.href = "/roadmap")}>
                     Road Map
                   </button>
                   <button className="subLnb" onClick={() => (window.location.href = "/comingSoon")}>

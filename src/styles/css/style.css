@@ -148,6 +148,11 @@ address {
   margin-left: 0;
 }
 
+@media all and (max-width: 604px) {
+  .footerLine {
+    background-size: 100% auto;
+  }
+}
 @media all and (max-width: 374px) {
   .footerIcon {
     float: inherit;
