@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*header style*/
+.headerWrap {
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: -1px;
+  left: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+.headerInner {
+  max-width: 1580px;
+  min-width: 280px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  position: relative;
+}
+.headerInner .logo {
+  position: absolute;
+  left: 20px;
+  top: 12px;
+}
+.headerInner .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.logoImg {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url(../img/logoTop.svg) center no-repeat;
+  background-size: contain;
+  margin-right: 14px;
+}
+.logoText {
+  display: inline-block;
+  font-size: 30px;
+  letter-spacing: -0.025em;
+  line-height: 45px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: 400;
+}
+.logoText span {
+  color: #ffcd00;
+  font-weight: 700;
+}
+.lnb {
+  display: inline-block;
+}
+.headerRight {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+.sns {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.sns.twitter {
+  background: url("../img/twitter.svg") rgba(255, 255, 255, 0.2) center no-repeat;
+  background-size: 25px;
+}
+.sns.gmail {
+  background: url("../img/google.svg") rgba(255, 255, 255, 0.2) center no-repeat;
+  background-size: 25px;
+}
+.sns > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.guide {
+  margin-right: 10px;
+  border-radius: 22.5px;
+  display: inline-block;
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.guide a {
+  display: inline-block;
+  vertical-align: top;
+  background-size: 25px;
+  line-height: 25px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  color: #ffff;
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+}
+.moNav {
+  text-align: right;
+  position: relative;
+}
+.moNav .lnb {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 300px;
+  text-align: right;
+}
+.iconMenu {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-block;
+  background: url("../img/iconHamburger.svg") #fff center no-repeat;
+  background-size: 25px;
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.iconClose {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-block;
+  background: url("../img/iconClose.svg") #fff center no-repeat;
+  background-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.moMenu {
+  display: none;
+}
+
+.moCon {
+  width: 200px;
+  border-radius: 30px;
+  background: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  display: block;
+  vertical-align: top;
+  margin-top: 10px;
+  text-align: left;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.moCon .guide {
+  box-shadow: none;
+}
+
+.moCon .guide .guideItemTop {
+  display: inline-block;
+  vertical-align: top;
+  background-size: 25px;
+  line-height: 25px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  color: #222;
+}
+
+.moCon .guide .guideItem {
+  display: inline-block;
+  vertical-align: top;
+  background-size: 25px;
+  line-height: 25px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  color: #222;
+}
+
+.moSns {
+  width: 200px;
+  height: 45px;
+  border-radius: 30px;
+  background: #fff;
+  padding: 10px 30px;
+  display: block;
+  vertical-align: top;
+  margin-top: 10px;
+  text-align: center;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.moSns > a {
+  border-radius: 50%;
+  width: 25px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.moSns .twitter {
+  background-size: contain;
+  margin-right: 20px;
+}
+
+.moSns .gmail {
+  background-size: contain;
+}

@@ -18,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <RecoilRoot>
-        {/* <Header /> */}
+        <Header />
         {isIE || isEdge ? alert("IE / Edge is not supported. Download Chrome/Opera/Firefox") : null}
         <Route exact path="/" component={Index} />
         <Route path="/Guide" component={Guide} />
