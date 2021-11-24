@@ -157,8 +157,6 @@
 
 @media all and (max-width: 1319px) {
   .sub .subLeft {
-    width: 250px;
-    height: 250px;
     top: auto;
     bottom: 10px;
     left: 0;
@@ -176,6 +174,22 @@
     font-size: 40px;
   }
   .sub .subLeft {
+    width: 250px;
+    height: 250px;
+  }
+  .sub .subRight {
+    width: 250px;
+    height: 250px;
+  }
+  .sub {
+    height: 300px;
+    .subBg {
+      height: 300px;
+    }
+  }
+}
+@media all and (max-width: 600px) {
+  .sub .subLeft {
     width: 200px;
     height: 200px;
   }
@@ -184,7 +198,6 @@
     height: 200px;
   }
 }
-
 @media all and (max-width: 374px) {
   .sub .subLeft {
     width: 150px;
