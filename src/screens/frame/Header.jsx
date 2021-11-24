@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "../../styles/css/style.css";
@@ -11,8 +11,27 @@ function Header() {
   const [subOpen, setSubOpen] = useState(false);
   const [sub1Open, setSub1Open] = useState(false);
   const [sub2Open, setSub2Open] = useState(false);
+
+  // 스크롤 Y 축 위치 저장
+  const [ScrollY, setScrollY] = useState(0);
+
+  // 스크롤 움직일때마다 위치 저장
+  useEffect(() => {
+    const watch = () => {
+      window.addEventListener("scroll", handleFollow);
+    };
+    watch();
+    return () => {
+      window.removeEventListener("scroll", handleFollow);
+    };
+  });
+
+  const handleFollow = () => {
+    setScrollY(window.pageYOffset);
+  };
+
   return (
-    <header className="headerWrap">
+    <header className={ScrollY > 0 ? "headerActive" : "headerWrap"}>
       <div className="headerBox">
         <div className="logoArea">
           <button onClick={() => (window.location.href = "/")}>
