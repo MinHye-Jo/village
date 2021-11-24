@@ -71,31 +71,6 @@ textarea:focus {
   color: #fff;
 }
 
-/* header style */
-.headerWrap {
-  width: 100%;
-  height: 60px;
-  padding: 7px 0;
-  position: absolute;
-  top: -1px;
-  left: 0;
-}
-.headerInner {
-  max-width: 1320px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-.headerInner .logo {
-  width: 60px;
-  height: 45px;
-}
-.headerInner .logo h1 a {
-  display: block;
-  width: 100%;
-  height: 45px;
-  background: url(../img/logoTop.svg) left no-repeat;
-  background-size: contain;
-}
 /* footer style */
 .footerWrap {
   background: #414d5e;
@@ -108,7 +83,7 @@ textarea:focus {
   height: 60px;
   position: absolute;
   top: -50px;
-  background: url(../img/footerTop.svg) bottom repeat-x;
+  background: url("../img/footerTop.svg") bottom repeat-x;
   background-size: 605px;
 }
 .footerTop {
@@ -125,8 +100,8 @@ textarea:focus {
 }
 .logoBottom {
   width: 144px;
-  height: 30px;
-  background: url("../img/logoTop.svg") left no-repeat;
+  height: 40px;
+  background: url("../img/logoW.svg") left no-repeat;
   background-size: contain;
   display: inline-block;
   margin-bottom: 10px;
@@ -135,8 +110,8 @@ textarea:focus {
   float: right;
 }
 .sns {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-left: 10px;
   display: inline-block;
 }
@@ -158,6 +133,19 @@ address {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #fff;
+}
+.moLnb .footerIcon {
+  margin-top: -30px;
+  float: left;
+}
+.moLnb .footerIcon a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: #7f7f7f;
+}
+.moLnb .sns.gmail {
+  margin-left: 0;
 }
 
 @media all and (max-width: 374px) {

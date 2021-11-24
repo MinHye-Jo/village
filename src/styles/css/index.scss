@@ -3,48 +3,28 @@
   width: 100%;
   min-width: 280px;
   height: 700px;
-  overflow: hidden;
+  position: relative;
   background: -o-linear-gradient(150deg, #103a69, #678cc9, #75ccff);
   background: linear-gradient(300deg, #103a69, #678cc9, #75ccff);
-  // position: relative;
   .mainBg {
     width: 100%;
     min-width: 280px;
     height: 711px;
-    background: url(../img/mainImgBg.png) bottom no-repeat;
+    background: url("../img/mainImgBg.png") bottom no-repeat;
     background-size: cover;
     position: relative;
     -webkit-animation: ani 2.5s infinite alternate;
     animation: ani 2.5s infinite alternate;
     z-index: 12;
   }
-  @-webkit-keyframes ani {
-    0% {
-      -webkit-transform: translate(0, 0);
-      transform: translate(0, 0);
-    }
-    100% {
-      -webkit-transform: translate(0px, -10px);
-      transform: translate(0px, -10px);
-    }
-  }
-  @keyframes ani {
-    0% {
-      -webkit-transform: translate(0, 0);
-      transform: translate(0, 0);
-    }
-    100% {
-      -webkit-transform: translate(0px, -10px);
-      transform: translate(0px, -10px);
-    }
-  }
+
   .mainImgLeft {
     width: 730px;
     height: 600px;
-    background: url(../img/mainImgLeft.png) center no-repeat;
+    background: url("../img/mainImgLeft.png") center no-repeat;
     background-size: contain;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 40px;
     -webkit-animation: aniLeft 2s infinite alternate;
     animation: aniLeft 2s infinite alternate;
@@ -73,7 +53,7 @@
   .mainImgRight {
     width: 730px;
     height: 600px;
-    background: url(../img/mainImgRight.png) center no-repeat;
+    background: url("../img/mainImgRight.png") center no-repeat;
     background-size: contain;
     position: absolute;
     top: 0;
@@ -116,7 +96,7 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 20;
   }
   .mainTitle {
     font-size: 60px;
@@ -147,7 +127,7 @@
     width: 100px;
     height: 80px;
     display: inline-block;
-    background: url(../img/logoTop.svg) center no-repeat;
+    background: url("../img/logoW.svg") center no-repeat;
     background-size: contain;
   }
 }
@@ -290,6 +270,10 @@
 
 @media all and (max-width: 1319px) {
   .main {
+    height: 549px;
+    .mainBg {
+      height: 550px;
+    }
     .mainTitle {
       font-size: 45px;
     }
@@ -297,15 +281,16 @@
       height: 60px;
     }
     .mainImgLeft {
-      bottom: -10%;
       left: 0;
       top: auto;
-      width: 100%;
-      background-size: 500px;
+      width: 500px;
+      height: 500px;
+      background-size: contain;
+      background-position: left bottom;
     }
     .mainWrap {
       position: absolute;
-      top: 50px;
+      top: 100px;
       left: 0;
       width: 100%;
       -webkit-transform: translate(0);
@@ -314,7 +299,8 @@
     }
     .mainImgRight {
       right: 0;
-      top: -10%;
+      top: 200px;
+      height: 300px;
     }
   }
   .cardArea {
@@ -328,14 +314,20 @@
 }
 @media all and (max-width: 767px) {
   .main {
+    .mainImgLeft {
+      width: 400px;
+      height: 400px;
+    }
+    .mainImgRight {
+      background-position: right bottom;
+
+      top: 50px;
+    }
     .mainLogo {
       height: 45px;
     }
     .mainTitle {
       font-size: 30px;
-    }
-    .mainImgLeft {
-      bottom: -5%;
     }
   }
   .wrapGreen .contentsWrap .contentsTitle {
@@ -367,10 +359,8 @@
 @media all and (max-width: 530px) {
   .main {
     .mainImgLeft {
-      background-size: 70%;
-    }
-    .mainImgLeft {
-      background-size: 400px;
+      width: 100%;
+      height: 300px;
     }
   }
   .cardArea {

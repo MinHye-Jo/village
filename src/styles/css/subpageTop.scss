@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Noto+Sans:wght@400;700&display=swap");
+.sub {
+  width: 100%;
+  min-width: 280px;
+  height: 350px;
+  position: relative;
+  background: -o-linear-gradient(150deg, #103a69, #678cc9, #75ccff);
+  background: linear-gradient(300deg, #103a69, #678cc9, #75ccff);
+  .subBg {
+    width: 100%;
+    min-width: 280px;
+    height: 350px;
+    background: url("../img/mainImgBg.png") no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    position: relative;
+    -webkit-animation: ani 2.5s infinite alternate;
+    animation: ani 2.5s infinite alternate;
+    z-index: 12;
+  }
+
+  .subLeft {
+    width: 300px;
+    height: 300px;
+    background: url("../img/mainImgLeft.png") center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    -webkit-animation: aniLeft 2s infinite alternate;
+    animation: aniLeft 2s infinite alternate;
+    z-index: 10;
+  }
+  @-webkit-keyframes aniLeft {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    100% {
+      -webkit-transform: translate(0px, 10px);
+      transform: translate(0px, 10px);
+    }
+  }
+  @keyframes aniLeft {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    100% {
+      -webkit-transform: translate(0px, 10px);
+      transform: translate(0px, 10px);
+    }
+  }
+  .subRight {
+    width: 300px;
+    height: 300px;
+    background: url("../img/mainImgRight.png") center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    -webkit-animation: aniRight 1.5s infinite alternate;
+    animation: aniRight 1.5s infinite alternate;
+    z-index: 9;
+  }
+  @-webkit-keyframes aniRight {
+    0% {
+      -webkit-transform: translate(0, 5px);
+      transform: translate(0, 5px);
+    }
+    100% {
+      -webkit-transform: translate(0px, 0);
+      transform: translate(0px, 0);
+    }
+  }
+  @keyframes aniRight {
+    0% {
+      -webkit-transform: translate(0, 5px);
+      transform: translate(0, 5px);
+    }
+    100% {
+      -webkit-transform: translate(0px, 0);
+      transform: translate(0px, 0);
+    }
+  }
+  .subWrap {
+    width: 60%;
+    min-width: 280px;
+    padding: 0 20px;
+    margin: 0 auto;
+    vertical-align: top;
+    font-size: 0;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 20;
+  }
+  .subTitle {
+    font-size: 26px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.16);
+    word-break: keep-all;
+    span {
+      font-weight: 700;
+    }
+  }
+  .subText {
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    margin-top: 10px;
+    word-break: keep-all;
+  }
+  .subLogo {
+    width: 100px;
+    height: 80px;
+    display: inline-block;
+    background: url("../img/logoW.svg") center no-repeat;
+    background-size: contain;
+  }
+}
+
+.contentsWrap {
+  max-width: 1320px;
+  min-width: 280px;
+  padding: 50px 20px 150px 20px;
+  margin: 0 auto;
+  .comingSoonTitle {
+    width: 100%;
+    text-align: center;
+    color: #81b49e;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    font-size: 60px;
+    word-break: keep-all;
+    img {
+      width: 50%;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media all and (max-width: 1319px) {
+  .sub .subLeft {
+    width: 250px;
+    height: 250px;
+    top: auto;
+    bottom: 10px;
+    left: 0;
+  }
+  .sub .subRight {
+    width: 250px;
+    height: 250px;
+    top: auto;
+    bottom: 10px;
+    right: 0;
+  }
+}
+@media all and (max-width: 767px) {
+  .contentsWrap .comingSoonTitle {
+    font-size: 40px;
+  }
+  .sub .subLeft {
+    width: 200px;
+    height: 200px;
+  }
+  .sub .subRight {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media all and (max-width: 374px) {
+  .sub .subLeft {
+    width: 150px;
+    height: 150px;
+    top: auto;
+    bottom: 10px;
+    left: 0;
+  }
+  .sub .subRight {
+    width: 150px;
+    height: 150px;
+    top: auto;
+    bottom: 10px;
+    right: 0;
+  }
+}
