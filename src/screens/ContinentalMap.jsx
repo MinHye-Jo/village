@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/css/subpageTop.scss";
 
-function Roadmap() {
+function ContinentalMap() {
   return (
     <div className="wrap">
       <div className="sub">
@@ -21,10 +21,15 @@ function Roadmap() {
           <div className="subRight" />
         </div>
       </div>
-      <div className="contentsTitle">Roadmap</div>
-      <img className="roadmap" src="img/roadmap.png" />
+      <div className="contentsWrap">
+        <div className="contentsTitle">Continental Map</div>
+        <img className="map1" src="img/map1.png" />
+      </div>
+      <div className="bgBlue">
+        <img className="map2" src="img/map2.png" />
+      </div>
     </div>
   );
 }
 
-export default Roadmap;
+export default ContinentalMap;

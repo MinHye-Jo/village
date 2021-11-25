@@ -136,8 +136,9 @@
 .contentsWrap {
   max-width: 1320px;
   min-width: 280px;
-  padding: 50px 20px 150px 20px;
+  padding: 50px 20px 100px 20px;
   margin: 0 auto;
+  text-align: center;
   .comingSoonTitle {
     width: 100%;
     text-align: center;
@@ -169,11 +170,27 @@
     }
   }
 }
-
+.contentsTitle {
+  width: 100%;
+  text-align: center;
+  color: #222;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  word-break: keep-all;
+  span {
+    font-size: 26px;
+  }
+}
 .roadmap {
   width: 100%;
   min-width: 280px;
   height: auto;
+  margin-top: 50px;
 }
 .wrapBlue {
   width: 100%;
@@ -194,6 +211,45 @@
     color: #3a8fff;
   }
 }
+.map1 {
+  width: 30%;
+  -webkit-animation: animap 1s infinite alternate;
+  animation: animap 1s infinite alternate;
+  z-index: 10;
+}
+@-webkit-keyframes animap {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0px, 10px);
+    transform: translate(0px, 10px);
+  }
+}
+
+@keyframes animap {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0px, 10px);
+    transform: translate(0px, 10px);
+  }
+}
+.map2 {
+  max-width: 100%;
+  min-width: 280px;
+}
+.bgBlue {
+  width: 100%;
+  min-width: 280px;
+  text-align: center;
+  background: #7dcfe2;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
 @media all and (max-width: 1319px) {
   .sub .subLeft {
     top: auto;
@@ -207,8 +263,19 @@
     bottom: 10px;
     right: 0;
   }
+  .roadmap {
+    margin-top: 0px;
+  }
 }
 @media all and (max-width: 767px) {
+  .contentsTitle {
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 30px;
+    span {
+      font-size: 20px;
+    }
+  }
   .contentsWrap .comingSoonTitle {
     font-size: 40px;
   }
@@ -225,6 +292,12 @@
     .subBg {
       height: 300px;
     }
+  }
+  .contentsWrap {
+    padding: 50px 20px 50px 20px;
+  }
+  .bgBlue {
+    padding-bottom: 50px;
   }
 }
 @media all and (max-width: 604px) {

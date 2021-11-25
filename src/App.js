@@ -8,6 +8,7 @@ import Header from "./screens/frame/Header";
 import Main from "./screens/Main";
 import Index from "./screens/Index";
 import Guide from "./screens/Guide";
+import ContinentalMap from "./screens/ContinentalMap";
 import Roadmap from "./screens/Roadmap";
 import ComingSoon from "./screens/ComingSoon";
 import Footer from "./screens/frame/Footer";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/Guide" component={Guide} />
         <Route path="/Roadmap" component={Roadmap} />
         <Route path="/ComingSoon" component={ComingSoon} />
+        <Route path="/ContinentalMap" component={ContinentalMap} />
         <Footer />
       </RecoilRoot>
     </BrowserRouter>

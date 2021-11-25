@@ -54,7 +54,7 @@ function Header() {
             Cardano Village Map
             <div className="lnbBorder" />
             <div className="submenu">
-              <button onClick={() => (window.location.href = "/comingSoon")}>Continental Map</button>
+              <button onClick={() => (window.location.href = "/continentalMap")}>Continental Map</button>
             </div>
           </button>
           <button className="btnLnb" onClick={() => (window.location.href = "/comingSoon")}>
@@ -104,7 +104,7 @@ function Header() {
                   Cardano Village Map <div className={sub2Open ? "rotate" : "rotate2"} />
                 </button>
                 <div className="moSubmenu" style={{ display: sub2Open ? "block" : "none" }}>
-                  <button className="subLnb" onClick={() => (window.location.href = "/comingSoon")}>
+                  <button className="subLnb" onClick={() => (window.location.href = "/continentalMap")}>
                     Continental Map
                   </button>
                 </div>
