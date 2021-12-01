@@ -21,12 +21,11 @@ function ContinentalMap() {
           <div className="subRight" />
         </div>
       </div>
-      <div className="contentsWrap">
-        <div className="contentsTitle">Continental Map</div>
-        <img className="map1" src="img/map1.png" />
-      </div>
       <div className="bgBlue">
-        <img className="map2" src="img/map2.png" />
+        <div className="blueLine" />
+        <div className="contentsTitle white">Continental Map</div>
+        <img className="map2" src="img/map2.png" alt="Continental Map" />
+        <div className="blank" />
       </div>
     </div>
   );
