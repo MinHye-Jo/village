@@ -43,9 +43,6 @@
       background: url("../img/logoW.svg") left no-repeat;
       background-size: auto 30px;
       display: inline-block;
-      -webkit-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
     }
     .logoTitle {
       display: inline-block;
@@ -54,9 +51,6 @@
       font-weight: 400;
       letter-spacing: -0.025em;
       font-size: 26px;
-      -webkit-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
       span {
         font-weight: 700;
       }
@@ -197,7 +191,7 @@
       height: 100vh;
       top: 0;
       left: 0;
-      background: #11aa8b;
+      background: #81b49e;
       padding: 0 20px;
       .moTop {
         width: 100%;
@@ -332,7 +326,8 @@
     }
   }
 }
-@media all and (max-width: 800px) {
+
+@media all and (max-width: 900px) {
   .headerWrap {
     height: 60px;
     .logoArea {
