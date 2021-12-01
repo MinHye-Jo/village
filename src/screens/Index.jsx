@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "../styles/css/index.scss";
 
 function Index() {
   return (
     <div className="wrap">
-      <div className="main">
+      <div className="main main2">
         <div className="mainWrap">
           <div className="mainTitle">
             <div className="mainLogo"></div>
@@ -18,7 +17,7 @@ function Index() {
           </div>
         </div>
 
-        <div className="mainBg">
+        <div className="mainBg mainBg2">
           <div className="mainImgLeft" />
           <div className="mainImgRight" />
         </div>
@@ -38,9 +37,10 @@ function Index() {
           <br />
           <span>Policy ID</span>
           <br />
-          2c763e2db8337324df122fffa38e0d97ecdf53d139025a0e1b6d6b97
+          <div>2c763e2db8337324df122fffa38e0d97ecdf53d139025a0e1b6d6b97</div>
           <br />
         </div>
+        <div className="blank" />
       </div>
       <div className="wrapGreen">
         <div className="greenLine" />
@@ -63,41 +63,47 @@ function Index() {
           <div className="wrapCard">
             <div className="cardArea">
               <button>
-                <div className="cardImg">
-                  <img src="/img/CardanoVillageex1.png" alt="card" />
+                <div className="collectionImg">
+                  <div className="example" />
+                  <img src="/img/village1.png" alt="collection" />
                 </div>
               </button>
             </div>
             <div className="cardArea">
               <button>
-                <div className="cardImg">
-                  <img src="/img/CardanoVillageex2.png" alt="card" />
+                <div className="collectionImg">
+                  <div className="example" />
+                  <img src="/img/village2.png" alt="collection" />
                 </div>
               </button>
             </div>
             <div className="cardArea">
               <button>
-                <div className="cardImg">
-                  <img src="/img/CardanoVillageex3.png" alt="card" />
+                <div className="collectionImg">
+                  <div className="example" />
+                  <img src="/img/village3.png" alt="collection" />
                 </div>
               </button>
             </div>
             <div className="cardArea">
               <button>
-                <div className="cardImg">
-                  <img src="/img/CardanoVillageex4.png" alt="card" />
+                <div className="collectionImg">
+                  <div className="example" />
+                  <img src="/img/village4.png" alt="collection" />
                 </div>
               </button>
             </div>
             <div className="cardArea">
               <button>
-                <div className="cardImg">
-                  <img src="/img/CardanoVillageex5.png" alt="card" />
+                <div className="collectionImg">
+                  <div className="example" />
+                  <img src="/img/village5.png" alt="collection" />
                 </div>
               </button>
             </div>
           </div>
         </div>
+        <div className="blank" />
       </div>
     </div>
   );
