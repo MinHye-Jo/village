@@ -21,8 +21,11 @@ function Roadmap() {
           <div className="subRight" />
         </div>
       </div>
-      <div className="contentsTitle">Roadmap</div>
-      <img className="roadmap" src="img/roadmap.png" />
+      <div className="bgSkyblue">
+        <div className="skyblueLine" />
+        <div className="contentsTitle">Road Map</div>
+        <img className="roadmap" src="img/roadmap.png" alt="Road Map" />
+      </div>
     </div>
   );
 }
