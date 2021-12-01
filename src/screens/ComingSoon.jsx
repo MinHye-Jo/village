@@ -25,7 +25,7 @@ function ComingSoon() {
         <div className="comingSoonTitle">
           <span> Coming Soon..</span>
           <br />
-          <img src="img/Charles.png" />
+          <img src="img/Charles.png" alt="coming soon" />
         </div>
       </div>
     </div>
