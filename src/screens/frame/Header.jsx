@@ -45,19 +45,23 @@ function Header() {
             Project Info
             <div className="lnbBorder" />
             <div className="submenu">
-              <button onClick={() => (window.location.href = "/comingSoon")}>About Project</button>
+              <button onClick={() => (window.location.href = "/aboutProject")}>About Project</button>
               <button onClick={() => (window.location.href = "/roadmap")}>Road Map</button>
-              <button onClick={() => (window.location.href = "/comingSoon")}>Team Member</button>
+              <button onClick={() => (window.location.href = "/teamMember")}>Team Member</button>
             </div>
           </button>
-          <button className="btnLnb">
+          <button className="btnLnb" onClick={() => (window.location.href = "/collection")}>
+            Collection
+            <div className="lnbBorder" />
+          </button>
+          <button className="btnLnb" onClick={() => (window.location.href = "/continentalMap")}>
             Cardano Village Map
             <div className="lnbBorder" />
             <div className="submenu">
               <button onClick={() => (window.location.href = "/continentalMap")}>Continental Map</button>
             </div>
           </button>
-          <button className="btnLnb" onClick={() => (window.location.href = "/comingSoon")}>
+          <button className="btnLnb" onClick={() => (window.location.href = "/faq")}>
             FAQ
             <div className="lnbBorder" />
           </button>
@@ -90,16 +94,19 @@ function Header() {
                   Project Info <div className={sub1Open ? "rotate" : "rotate2"} />
                 </button>
                 <div className="moSubmenu" style={{ display: sub1Open ? "block" : "none" }}>
-                  <button className="subLnb" onClick={() => (window.location.href = "/comingSoon")}>
+                  <button className="subLnb" onClick={() => (window.location.href = "/aboutProject")}>
                     About Project
                   </button>
                   <button className="subLnb" onClick={() => (window.location.href = "/roadmap")}>
                     Road Map
                   </button>
-                  <button className="subLnb" onClick={() => (window.location.href = "/comingSoon")}>
+                  <button className="subLnb" onClick={() => (window.location.href = "/teamMember")}>
                     Team Member
                   </button>
                 </div>
+                <button className="btnLnb" onClick={() => (window.location.href = "/collection")}>
+                  Collection
+                </button>
                 <button className="btnLnb" onClick={() => setSub2Open(!sub2Open)}>
                   Cardano Village Map <div className={sub2Open ? "rotate" : "rotate2"} />
                 </button>
@@ -108,10 +115,10 @@ function Header() {
                     Continental Map
                   </button>
                 </div>
-                <button className="btnLnb" onClick={() => (window.location.href = "/comingSoon")}>
+                <button className="btnLnb" onClick={() => (window.location.href = "/faq")}>
                   FAQ
                 </button>
-                <button className="btnLnb">Contack</button>
+                <button className="btnLnb">Contact</button>
                 <div className="footerIcon">
                   <a href="mailto:cnftgalaxy@gmail.com" target="_blank" rel="noreferrer">
                     <div className="sns gmail" />
