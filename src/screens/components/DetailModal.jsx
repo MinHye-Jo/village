@@ -1,100 +1,85 @@
-import React, { useState, useEffect } from "react";
-import "../../styles/css/main.scss";
+import React, { useRef, useEffect } from "react";
+import "../../styles/css/popup.scss";
 
 function DetailModal({ data, open, onClose, onAction }) {
-  const [collectionData, setCollectionData] = useState({
-    nftNameKor: "",
-    imgUrl: "",
-    age: "",
-    description: "",
-    nftPrice: "",
-    targetQuantity: 0,
-    mintCount: 0,
-    closed: false,
-  });
-  const [soldOut, setSoldOut] = useState(false);
+  const wrapperRef = useRef(null);
 
   useEffect(() => {
-    if (data) {
-      setCollectionData({ ...data });
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
 
-      // soldOut 제어
-      if (data.targetQuantity - data.mintCount <= 0) {
-        setSoldOut(true);
-      } else setSoldOut(false);
-
-      /* clearInterval(intervalVal);
-        intervalVal = setInterval(checkSoldOut, 10000);
-        return false; */
+  // 영역 밖 클릭시 모달창 닫기
+  function handleClickOutside(event) {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      if (open) onClose();
     }
-  }, [data]);
-
+  }
   return (
     <div className="popupWrap" style={{ display: open ? "block" : "none" }}>
-      <div className="popup1" style={{ display: open ? "block" : "none" }}>
-        <button className="popupClose" onClick={() => onClose()}></button>
-        <div className="popupLeft">
-          <div
-            className={collectionData.closed ? "closed" : "soldOut"}
-            style={{ display: soldOut || collectionData.closed ? "block" : "none" }}
-          >
-            <div>
-              Sold
-              <br />
-              Out
+      <div className="popupArea" ref={wrapperRef}>
+        <button className="btnClose" onClick={() => onClose()} />
+        <div className="popupContents">
+          <div className="popupTitle">Cardano Village</div>
+          <div className="cardWrap">
+            <div className="cardImg">
+              {/*  sold out 이면 display:block; 아니면 display:block*/}
+              <div className="soldOut" style={{ display: "none" }} />
+              <img src="/img/village2.png" alt="collection" />
             </div>
           </div>
-          <div></div>
-          <div className="popupImg">
-            <img
-              src={collectionData.imgUrl.replace("/static/", "/")}
-              alt={collectionData.nftNameKor}
-              name={collectionData.nftNameKor}
-            />
-          </div>
-        </div>
-        <div className="popupRight">
-          <div className="popupTitle">{collectionData.nftNameKor}</div>
           <div className="popupText">
-            <div className="row">
-              <div className="popupSubtitle">Age</div>
-              <span>{collectionData.age}</span>
-            </div>
-            <div className="row">
-              <div className="popupSubtitle">Story</div>
-            </div>
-            <div className="row">
-              <span dangerouslySetInnerHTML={{ __html: collectionData.description }}></span>
-            </div>
-            <div className="row">
-              <br />
-            </div>
-            <div className="row">
-              <div className="popupSubtitle">Price</div>
-              <span className="blue">{collectionData.nftPrice / 1000000 + " ADA"}</span>
-            </div>
-            <div className="row">
-              <div className="popupSubtitle">Remain</div>
-              <span className="blue">{collectionData.targetQuantity - collectionData.mintCount}</span>
-            </div>
-            <div className="buyNumber">
-              <div className="popupSubtitle">Quantity</div>
-              <div className="quantity">
-                <input readOnly type="number" min="1" max="9" step="1" value="1" />
-                <div className="quantity-nav">
-                  <div className="quantity-button quantity-up">+</div>
-                  <div className="quantity-button quantity-down">-</div>
+            <div className="popupSubtitle">
+              <div className="row half">
+                <div className="boxGreen">
+                  <div className="title">Continent</div>
+                  <div className="value">Byron</div>
                 </div>
               </div>
-              <button className="btnBuy" disabled onClick={() => onAction(collectionData)}>
-                BUY
-              </button>
+              <div className="row half">
+                <div className="boxGreen">
+                  <div className="title">Village</div>
+                  <div className="value">Charles</div>
+                </div>
+              </div>
+              <div className="row half">
+                <div className="boxGreen">
+                  <div className="title">Village Number</div>
+                  <div className="value">1</div>
+                </div>
+              </div>
+              <div className="row half">
+                <div className="boxGreen">
+                  <div className="title">Theme</div>
+                  <div className="value">Night</div>
+                </div>
+              </div>
+              <div className="row half">
+                <div className="boxGreen">
+                  <div className="title">Tree Color</div>
+                  <div className="value">Green</div>
+                </div>
+              </div>
+              <div className="row half">
+                <div className="boxGreen">
+                  <div className="title">Charles</div>
+                  <div className="value">N</div>
+                </div>
+              </div>
+              <div className="row half">
+                <div className="boxGreen">
+                  <div className="title">Soldier</div>
+                  <div className="value">N</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="popupBg"></div>
+      <div className="popupBg" />
     </div>
   );
 }
