@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useHistory } from "react-router-dom";
 import "../styles/css/index.scss";
-
-import { nftAuctionList } from "../services/collection";
 
 const dday = new Date("Decemver 10, 2021, 13:00:00"); //디데이
 // UTC 타입 현재 날짜 (고정)
@@ -13,8 +10,6 @@ console.log(dday);
 console.log(today);
 
 function Main(props) {
-  const history = useHistory();
-
   // 카운트 제어
   const [d, setD] = useState(0);
   const [h, setH] = useState(0);
@@ -22,18 +17,15 @@ function Main(props) {
   const [s, setS] = useState(0);
   const countTimerRef = useRef();
 
-  // 데이터 제어
-  const [collectionList, setCollectionList] = useState(null);
-  const [collectionCtrl, setCollectionCtrl] = useState({
-    0: true,
-    1: false,
-    2: false,
-    3: false,
-    4: false,
-  });
-
+  // 카운트 다운 인터벌 셋
   useEffect(() => {
-    counter();
+    (async () => {
+      counter();
+    })();
+
+    return function cleanup() {
+      clearInterval(countTimerRef.current);
+    };
   }, []);
 
   // 메인 카운트다운
@@ -50,29 +42,9 @@ function Main(props) {
       setS(
         Math.floor((distance % (1000 * 60)) / 1000) < 10
           ? `0${Math.floor((distance % (1000 * 60)) / 1000)}`
-          : Math.floor((distance % (1000 * 60)) / 1000)
+          : Math.floor((distance % (1000 * 60)) / 1000),
       );
     }, 1000);
-  };
-
-  // 컬렉션 클릭시 데이터 로컬스토리지 저장
-  const detailViewDataSet = (data) => {
-    clearInterval(countTimerRef.current);
-
-    const storageData = {
-      nftId: data.nftId,
-      auctionId: data.auctionId,
-      auctionDetailId: data.auctionDetailId,
-      collectionId: data.collectionId,
-      sdate: data.startDate,
-      edate: data.endDate,
-    };
-
-    window.localStorage.setItem("auctionData", JSON.stringify(storageData));
-
-    history.push({
-      pathname: `/nft/${data.nftId}`,
-    });
   };
 
   // 컬렉션 날짜 체크

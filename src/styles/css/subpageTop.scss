@@ -423,7 +423,8 @@
   -webkit-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
-  button {
+  cursor: pointer;
+  .collectionContain {
     width: 100%;
     background: #e0efe8;
     border-radius: 20px;
@@ -492,7 +493,7 @@
   -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
-.collectionArea:hover button {
+.collectionArea:hover .collectionContain {
   -webkit-transform: scale(1.02);
   -ms-transform: scale(1.02);
   transform: scale(1.02);
@@ -615,6 +616,7 @@
       -webkit-transition: all 0.15s ease-in-out;
       -o-transition: all 0.15s ease-in-out;
       transition: all 0.15s ease-in-out;
+      cursor: pointer;
     }
     .btnFilterClose {
       position: absolute;
@@ -636,6 +638,7 @@
       -webkit-transition: all 0.15s ease-in-out;
       -o-transition: all 0.15s ease-in-out;
       transition: all 0.15s ease-in-out;
+      cursor: pointer;
     }
     .rotate3 {
       width: 10px;
@@ -859,7 +862,7 @@
   .collectionArea {
     width: 50%;
     padding: 5px;
-    button {
+    .collectionContain {
       padding: 5px;
     }
   }

@@ -68,6 +68,7 @@ function TeamMember() {
                 <br />
                 <span>ART & DESIGN</span>
               </div>
+              <div className="memberText">Working as an Environment Concept Artist in the Entertainment Industry</div>
             </div>
           </div>
           <div className="row right">

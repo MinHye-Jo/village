@@ -2,11 +2,23 @@ import React, { useState, useEffect } from "react";
 import "../styles/css/subpageTop.scss";
 import DetailModal from "./components/DetailModal";
 
+import { ntfList } from "../services/collection";
+
 function Collection() {
   // 팝업제어
   const [detailOpen, setDetailOpen] = useState(false);
   // 필터 제어
   const [filterOpen, setFilterOpen] = useState(false);
+
+  // 코인 리스트 조회
+  useEffect(() => {
+    (async () => {
+      const { data } = await ntfList({ collectionId: 42 });
+      if (data && data.return_code === 200) {
+        console.log(data);
+      }
+    })();
+  }, []);
 
   return (
     <div className="wrap">
@@ -32,15 +44,15 @@ function Collection() {
         <div className="contentsTitle">Collection</div>
         <div className="collectionTop">
           <div className="filterWrap">
-            <button className="btnFilter" onClick={() => setFilterOpen(true)}>
+            <div className="btnFilter" onClick={() => setFilterOpen(true)}>
               Filter&nbsp;
               <div className="rotate4" />
-            </button>
+            </div>
             <div className="filterArea" style={{ display: filterOpen ? "block" : "none" }}>
-              <button className="btnFilterClose" onClick={() => setFilterOpen(false)}>
+              <div className="btnFilterClose" onClick={() => setFilterOpen(false)}>
                 Filter&nbsp;
                 <div className="rotate3" />
-              </button>
+              </div>
               <div className="filterTitle">Time</div>
               <select name="selectTime" id="">
                 <option value="0" selected="selected" hidden="hidden">
@@ -71,46 +83,46 @@ function Collection() {
         </div>
         <div className="wrapCollection">
           <div className="collectionArea">
-            <button onClick={() => setDetailOpen(true)}>
+            <div className="collectionContain" onClick={() => setDetailOpen(true)}>
               <div className="collectionImg">
                 {/* sold out 아닐때 display none */}
                 <div className="soldOut" style={{ display: "none" }} />
                 <img src="/img/village1.png" alt="collection" />
               </div>
-            </button>
+            </div>
           </div>
           <div className="collectionArea">
-            <button onClick={() => setDetailOpen(true)}>
+            <div className="collectionContain" onClick={() => setDetailOpen(true)}>
               <div className="collectionImg">
                 {/* sold out 일때 display block */}
                 <div className="soldOut" />
                 <img src="/img/village2.png" alt="collection" />
               </div>
-            </button>
+            </div>
           </div>
           <div className="collectionArea">
-            <button onClick={() => setDetailOpen(true)}>
+            <div className="collectionContain" onClick={() => setDetailOpen(true)}>
               <div className="collectionImg">
                 <div className="soldOut" />
                 <img src="/img/village3.png" alt="collection" />
               </div>
-            </button>
+            </div>
           </div>
           <div className="collectionArea">
-            <button onClick={() => setDetailOpen(true)}>
+            <div className="collectionContain" onClick={() => setDetailOpen(true)}>
               <div className="collectionImg">
                 <div className="soldOut" />
                 <img src="/img/village4.png" alt="collection" />
               </div>
-            </button>
+            </div>
           </div>
           <div className="collectionArea">
-            <button onClick={() => setDetailOpen(true)}>
+            <div className="collectionContain" onClick={() => setDetailOpen(true)}>
               <div className="collectionImg">
                 <div className="soldOut" />
                 <img src="/img/village5.png" alt="collection" />
               </div>
-            </button>
+            </div>
           </div>
         </div>
         <button className="btnViewMore">View More</button>

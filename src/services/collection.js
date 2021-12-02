@@ -1,8 +1,8 @@
 import http from "../config/http";
 
 // 목록 조회
-export const ntfList = () => {
-  return http.post("/collection/list", {});
+export const ntfList = (data) => {
+  return http.post("/collection/listSearch", data);
 };
 
 // 세부 정보 조회
