@@ -857,7 +857,6 @@
     font-size: 14px;
   }
   .collectionArea {
-    width: 50%;
     padding: 5px;
     button {
       padding: 5px;
@@ -920,6 +919,12 @@
     width: 50%;
   }
 }
+@media all and (max-width: 530px) {
+  .collectionArea {
+    width: 50%;
+  }
+}
+
 @media all and (max-width: 374px) {
   .sub .subLeft {
     width: 150px;
