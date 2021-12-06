@@ -71,20 +71,21 @@ function QrModal({ data, open, onClose, onAction }) {
             <div className="popupSubtitle">Important</div>
             <div className="popupBox red" style={{ textAlign: "left" }}>
               <b>Important</b>
-              <br />* You must use a Cardano Shelley-Era wallet such as&nbsp;
-              <a href="https://daedaluswallet.io/" target="_blank" rel="noreferrer">
-                Daedalus
-              </a>
-              ,
-              <a href="https://yoroi-wallet.com/" target="_blank" rel="noreferrer">
-                Yoroi
-              </a>
               <br />
-              * It might take a minute your addressTransaction to be reflected after payment.
+              It is minted randomly at all stages. <br />
+              Once the minting &raquo; refund is completed for each step, the next step will proceed.
               <br />
-              * It is based on the order in which Ada is transferred to the server wallet, not the order in which the
-              purchase button was pressed. <br />* If the purchase fails or the amount does not match, The amount
-              transferred will be automatically refunded excluding fees.
+              Each step verifles the bulk purchase of the bot. <br />
+              (Buyers should be careful of indiscriminate ADA shipments so that they are not suspected of being bots.){" "}
+              <br />
+              <br />
+              · The first stage sells 3,000 units. The price is 35ADA.
+              <br />
+              · The second stage sells 3,000 units. The price is 40ADA.
+              <br />
+              · The last step, sells 4,000 units. The price is 45ADA.
+              <br />
+              (At this stage, we do not verify the bulk purchase of BOT.)
               <br />
             </div>
           </div>
