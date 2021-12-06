@@ -204,46 +204,49 @@
   min-width: 240px;
   margin-top: 30px;
   .row {
+    width: 100%;
     margin-bottom: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: inline-block;
   }
   .faqBox {
-    padding: 20px 20px 20px 20px;
+    padding: 20px 40px 20px 40px;
     border-radius: 20px;
     text-align: left;
     margin-bottom: 50px;
     background: #e7f1ec;
+    -webkit-box-flex: inherit;
+    -ms-flex: inherit;
+    flex: inherit;
+    width: 94%;
+    margin-left: 3%;
+    min-width: 38px;
   }
   .faqLeft {
-    width: 60px;
-    height: 60px;
     display: inline-block;
     text-align: left;
+    width: 6%;
+    height: 54px;
     .iconQ {
       width: 100%;
       height: 100%;
-      background: url("../img/iconA.svg") center no-repeat;
-      background-size: 50px;
+      background: url("../img/iconA.svg") left no-repeat;
+      background-size: contain;
       border-radius: 50%;
       display: inline-block;
     }
     .iconA {
       width: 100%;
       height: 100%;
-      background: url("../img/iconQ.svg") center no-repeat;
-      background-size: 50px;
+      background: url("../img/iconQ.svg") left no-repeat;
+      background-size: contain;
       display: inline-block;
       border-radius: 50%;
     }
   }
   .faqRight {
     display: inline-block;
-    margin-left: 10px;
-    -webkit-box-flex: 1;
-    -ms-flex: auto;
-    flex: auto;
+    text-align: left;
+    width: 94%;
     .boxMint {
       color: #81b49e;
       background: #fff;
@@ -268,6 +271,20 @@
       padding: 14px 20px;
       border-radius: 10px;
       line-height: 26px;
+      .greenSmall {
+        font-size: 14px;
+        line-height: 18px;
+        color: #222;
+        font-weight: 400;
+        b {
+          color: #888;
+          font-weight: 700;
+        }
+        span {
+          font-weight: 700;
+          color: #11aa8b;
+        }
+      }
     }
   }
 }
@@ -330,6 +347,45 @@
     font-size: 14px;
     color: #222;
     word-break: keep-all;
+  }
+}
+.guideWrap {
+  margin-top: 20px;
+  .row.left {
+    text-align: center;
+    padding: 20px 0;
+    .guideTitle {
+      text-align: left;
+    }
+  }
+  .guideImg {
+    display: inline-block;
+    width: 30%;
+    img {
+      max-width: 100%;
+      -webkit-box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
+      box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
+      border-radius: 20px;
+      border: solid 3px #e0efe8;
+    }
+  }
+  .guideTitle {
+    display: inline-block;
+    width: 60%;
+    word-break: keep-all;
+    padding: 20px;
+    .guideName {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      font-size: 24px;
+      color: #222;
+      word-break: keep-all;
+      span {
+        color: #81b49e;
+        font-size: 40px;
+      }
+    }
   }
 }
 .wrapBlue {
@@ -748,6 +804,16 @@
   .collectionArea {
     width: 25%;
   }
+  .faqWrap .faqLeft {
+    width: 10%;
+  }
+  .faqWrap .faqRight {
+    width: 90%;
+  }
+
+  .guideWrap .guideTitle {
+    width: 70%;
+  }
 }
 @media all and (max-width: 1023px) {
   .collectionArea {
@@ -760,36 +826,26 @@
     font-size: 14px;
     line-height: 18px;
   }
-}
-@media all and (max-width: 850px) {
   .faqWrap {
-    .row {
-      display: inherit;
-    }
-
-    .faqRight {
-      -webkit-box-flex: inherit;
-      -ms-flex: inherit;
-      flex: inherit;
-      width: 87%;
-      margin-left: 3%;
-      min-width: 38px;
-    }
     .faqLeft {
-      width: 10%;
       height: 38px;
-    }
-    .faqLeft .iconA,
-    .faqLeft .iconQ {
-      background-size: contain;
+      .iconQ,
+      .iconA {
+        background-position: center;
+      }
     }
     .faqBox {
       margin-bottom: 30px;
+      padding: 20px;
     }
     .faqRight .boxGreen {
       font-size: 14px;
       line-height: 18px;
       padding: 10px;
+      .greenSmall {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
     .faqRight .boxMint {
       font-size: 14px;
@@ -797,6 +853,8 @@
       padding: 10px;
     }
   }
+}
+@media all and (max-width: 850px) {
   .memberWrap .memberTitle {
     width: 70%;
   }
@@ -844,6 +902,19 @@
     width: 30%;
   }
   .memberWrap .memberTitle {
+    width: 100%;
+    position: inherit;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    left: 0 !important;
+    right: inherit;
+    padding: 20px 0;
+  }
+  .guideWrap .guideImg {
+    width: 50%;
+  }
+  .guideWrap .guideTitle {
     width: 100%;
     position: inherit;
     -webkit-transform: translateY(0);
@@ -913,10 +984,27 @@
     height: 180px;
   }
   .memberWrap .memberImg {
-    width: 40%;
+    width: 100%;
+  }
+
+  .guideWrap .row.left {
+    text-align: center;
+    padding: 0;
+  }
+  .guideWrap .guideImg {
+    width: 70%;
+  }
+  .guideWrap .guideTitle .guideName {
+    font-size: 16px;
   }
   .aboutWrap .row.half img {
     width: 50%;
+  }
+  .faqWrap .faqLeft {
+    width: 15%;
+  }
+  .faqWrap .faqRight {
+    width: 85%;
   }
 }
 @media all and (max-width: 530px) {
@@ -943,6 +1031,12 @@
 
   .collectionTop .searchWrap {
     width: 150px;
+  }
+  .faqWrap .faqLeft {
+    width: 25%;
+  }
+  .faqWrap .faqRight {
+    width: 75%;
   }
 }
 @media all and (max-width: 310px) {
