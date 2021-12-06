@@ -23,7 +23,7 @@ function Roadmap() {
       </div>
       <div className="bgSkyblue">
         <div className="skyblueLine" />
-        <div className="contentsTitle">Road Map</div>
+        <div className="contentsTitle">Roadmap</div>
         <img className="roadmap" src="img/roadmap.png" alt="Road Map" />
       </div>
     </div>

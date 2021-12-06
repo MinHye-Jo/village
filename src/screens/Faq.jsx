@@ -34,6 +34,53 @@ function Faq() {
                 <div className="iconQ" />
               </div>
               <div className="faqRight">
+                <div className="boxMint">Please let me know the sales price and procedure.</div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="faqLeft">
+                <div className="iconA" />
+              </div>
+              <div className="faqRight">
+                <div className="boxGreen">
+                  It is minted randomly at all stages.
+                  <br />
+                  Once the minting -&raquo; refund is completed for each step, the next step will proceed. Each step
+                  verifies the bulk purchase of the bot.
+                  <br />
+                  <br />
+                  <div className="greenSmall">
+                    <b>
+                      * Buyers should be careful of indiscriminate ADA shipments so that they are not suspected of being
+                      bots.
+                    </b>
+                    <br />
+                    <br />
+                    The first stage sells 3,000 units.
+                    <br />
+                    The price is <span>35ADA</span>. <br />
+                    <br />
+                    The second stage sells 3,000 units.
+                    <br />
+                    The price is <span>40ADA</span>.
+                    <br />
+                    <br />
+                    The last step, step 3, sells 4,000 units.
+                    <br />
+                    The price is <span>45ADA</span>. <br />
+                    <br />
+                    <b>* At this stage, we do not verify the bulk purchase of BOT.</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="faqBox">
+            <div className="row">
+              <div className="faqLeft">
+                <div className="iconQ" />
+              </div>
+              <div className="faqRight">
                 <div className="boxMint">What is OG membership?</div>
               </div>
             </div>

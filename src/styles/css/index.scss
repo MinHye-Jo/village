@@ -495,16 +495,16 @@
       line-height: 18px;
     }
   }
-  .cardArea .cardName {
-    font-size: 14px;
-  }
   .cardArea {
-    width: 50%;
     padding: 5px;
+    .cardName {
+      font-size: 14px;
+    }
     button {
       padding: 5px;
     }
   }
+
   .blank {
     height: 50px;
   }
@@ -517,5 +517,8 @@
       height: 300px;
       bottom: 40px;
     }
+  }
+  .cardArea {
+    width: 50%;
   }
 }
