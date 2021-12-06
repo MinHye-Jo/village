@@ -6,6 +6,7 @@ function QrModal({ data, open, onClose, onAction }) {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
+    console.log(data);
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
@@ -39,13 +40,12 @@ function QrModal({ data, open, onClose, onAction }) {
                 <div className="boxGreen">
                   <div className="title">Address</div>
                   <div className="value">
-                    <TextareaAutosize
-                      type="text"
-                      readOnly
-                      value="2c763e2db8337324df122fffa38e0d97ecdf53d139025a0e1b6d6b97"
-                    />
+                    <TextareaAutosize type="text" readOnly value={data.addressId ? data.addressId : ""} />
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-                    <button className="btnCopy">
+                    <button
+                      className="btnCopy"
+                      onClick={() => navigator.clipboard.writeText(data.addressId ? data.addressId : "")}
+                    >
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                         <path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"></path>
                       </svg>
@@ -57,9 +57,12 @@ function QrModal({ data, open, onClose, onAction }) {
                 <div className="boxGreen">
                   <div className="title">Amount</div>
                   <div className="value ada">
-                    <TextareaAutosize type="text" readOnly value="30" rows="1" />
+                    <TextareaAutosize type="text" readOnly value={data.price ? data.price : ""} rows="1" />
                     ADA &nbsp;
-                    <button className="btnCopy">
+                    <button
+                      className="btnCopy"
+                      onClick={() => navigator.clipboard.writeText(data.price ? data.price : "")}
+                    >
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                         <path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"></path>
                       </svg>

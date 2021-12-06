@@ -23,12 +23,12 @@ function DetailModal({ data, open, onClose, onAction }) {
       <div className="popupArea" ref={wrapperRef}>
         <button className="btnClose" onClick={() => onClose()} />
         <div className="popupContents">
-          <div className="popupTitle">Cardano Village</div>
+          <div className="popupTitle">{data && data.nftName}</div>
           <div className="cardWrap">
             <div className="cardImg">
               {/*  sold out 이면 display:block; 아니면 display:block*/}
               <div className="soldOut" style={{ display: "none" }} />
-              <img src="/img/village2.png" alt="collection" />
+              <img src={data && data.imgUrl} alt="collection" />
             </div>
           </div>
           <div className="popupText">
@@ -36,43 +36,31 @@ function DetailModal({ data, open, onClose, onAction }) {
               <div className="row half">
                 <div className="boxGreen">
                   <div className="title">Continent</div>
-                  <div className="value">Byron</div>
+                  <div className="value">{data && data.param2}</div>
                 </div>
               </div>
               <div className="row half">
                 <div className="boxGreen">
                   <div className="title">Village</div>
-                  <div className="value">Charles</div>
+                  <div className="value">{data && data.param3}</div>
                 </div>
               </div>
               <div className="row half">
                 <div className="boxGreen">
                   <div className="title">Village Number</div>
-                  <div className="value">1</div>
+                  <div className="value">{data && data.param1}</div>
                 </div>
               </div>
               <div className="row half">
                 <div className="boxGreen">
                   <div className="title">Theme</div>
-                  <div className="value">Night</div>
+                  <div className="value">{data && data.param4}</div>
                 </div>
               </div>
               <div className="row half">
                 <div className="boxGreen">
                   <div className="title">Tree Color</div>
-                  <div className="value">Green</div>
-                </div>
-              </div>
-              <div className="row half">
-                <div className="boxGreen">
-                  <div className="title">Charles</div>
-                  <div className="value">N</div>
-                </div>
-              </div>
-              <div className="row half">
-                <div className="boxGreen">
-                  <div className="title">Soldier</div>
-                  <div className="value">N</div>
+                  <div className="value">{data && data.param5}</div>
                 </div>
               </div>
             </div>

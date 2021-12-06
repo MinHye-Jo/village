@@ -50,10 +50,10 @@ function Header() {
               <button onClick={() => (window.location.href = "/teamMember")}>Team Member</button>
             </div>
           </button>
-          {/* <button className="btnLnb" onClick={() => (window.location.href = "/collection")}>
+          <button className="btnLnb" onClick={() => (window.location.href = "/collection")}>
             Collection
             <div className="lnbBorder" />
-          </button> */}
+          </button>
           <button className="btnLnb" onClick={() => (window.location.href = "/continentalMap")}>
             Cardano Village Map
             <div className="lnbBorder" />

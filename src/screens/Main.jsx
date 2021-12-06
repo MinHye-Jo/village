@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/css/index.scss";
+import QrModal from "./components/QrModal";
+
+import { collectionInfo, getAddress } from "../services/collection";
 
 const dday = new Date("Decemver 10, 2021, 13:00:00"); //디데이
 // UTC 타입 현재 날짜 (고정)
@@ -10,6 +13,13 @@ console.log(dday);
 console.log(today);
 
 function Main(props) {
+  // 오픈 확인
+  const [openFlag, setOpenFlag] = useState(false);
+
+  // 팝업제어
+  const [qrOpen, setQrOpen] = useState(false);
+  const [qrData, setQrData] = useState(false);
+
   // 카운트 제어
   const [d, setD] = useState(0);
   const [h, setH] = useState(0);
@@ -17,10 +27,30 @@ function Main(props) {
   const [s, setS] = useState(0);
   const countTimerRef = useRef();
 
+  // 컬렉션 데이터
+  const [containData, setContainData] = useState(0);
+
+  // 품절 확인
+  const [soldOut, setSoldOut] = useState(false);
+
   // 카운트 다운 인터벌 셋
   useEffect(() => {
     (async () => {
       counter();
+
+      const { data } = await collectionInfo({ collectionId: 42 });
+      if (data && data.return_code === 200) {
+        console.log(data.response[0]);
+        const res = data.response[0];
+        if (res.openStatus == 6) {
+          if (res.mintCount == res.targetQuantity) {
+            setSoldOut(true);
+          }
+        }
+        setContainData(data.response[0]);
+      } else {
+        alert("It's a wrong access.");
+      }
     })();
 
     return function cleanup() {
@@ -36,6 +66,12 @@ function Main(props) {
 
       const distance = dday.getTime() - now;
 
+      if (distance <= 0) {
+        setOpenFlag(false);
+        clearInterval(countTimerRef.current);
+        return;
+      }
+
       setD(Math.floor(distance / (1000 * 60 * 60 * 24)));
       setH(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
       setM(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
@@ -47,79 +83,98 @@ function Main(props) {
     }, 1000);
   };
 
-  // 컬렉션 날짜 체크
-  const detailOpenChk = (dateVal, type, val) => {
-    const startDate = new Date(dateVal.startDate.replace(/-/g, "/"));
-    const endDate = new Date(dateVal.endDate.replace(/-/g, "/"));
-
-    if (type === "box") {
-      if (startDate < today) {
-        if (endDate < today) {
-          return <div className="redBox">Close</div>;
-        } else return <div className="blueBox">Proceeding</div>;
-      } else {
-        return <div className="greyBox">Getting Ready</div>;
-      }
-    }
-
-    if (type === "ada") {
-      const amount = val.highstBidPrice === 0 ? "BID" : `${val.highstBidPrice / 1000000}ADA`;
-
-      if (startDate < today) {
-        if (endDate < today) {
-          return (
-            <div className="adaBox" style={{ color: "#ff4747" }}>
-              {amount}
-            </div>
-          );
-        } else
-          return (
-            <div className="adaBox" style={{ color: "#0056ff" }}>
-              {amount}
-            </div>
-          );
-      }
+  // 구매 버튼 클릭
+  const getAddressAction = async () => {
+    const { data } = await getAddress({ addrName: "village" });
+    if (data && data.return_code === 200) {
+      const addrData = { ...data.response[0], price: containData.nftPrice / 1000000 };
+      setQrData(addrData);
+      setQrOpen(true);
+    } else {
+      alert("It's a wrong access.");
     }
   };
 
   return (
     <div className="wrap">
+      <QrModal data={qrData} open={qrOpen} onClose={() => setQrOpen(false)} />
       <div className="main">
         <div className="mainWrap">
           <div className="mainTitle">
             <div className="mainLogo"></div>
             <br />
             <span>Cardano</span>Village
-            <div className="mainCount">
-              <div className="countTitle titleWhite">COMING SOON</div>
-              <div className="counter">
-                <div>
-                  <span className="days" id="day">
-                    {d}
-                  </span>
-                  <div className="smallText">Days</div>
+            {!openFlag && (
+              <div className="mainCount">
+                <div className="countTitle titleWhite">COMING SOON</div>
+                <div className="counter">
+                  <div>
+                    <span className="days" id="day">
+                      {d}
+                    </span>
+                    <div className="smallText">Days</div>
+                  </div>
+                  <div>
+                    <span className="hours" id="hour">
+                      {h}
+                    </span>
+                    <div className="smallText">Hours</div>
+                  </div>
+                  <div>
+                    <span className="minutes" id="minute">
+                      {m}
+                    </span>
+                    <div className="smallText">Minutes</div>
+                  </div>
+                  <div>
+                    <span className="seconds" id="second">
+                      {s}
+                    </span>
+                    <div className="smallText">Seconds</div>
+                  </div>
                 </div>
-                <div>
-                  <span className="hours" id="hour">
-                    {h}
-                  </span>
-                  <div className="smallText">Hours</div>
-                </div>
-                <div>
-                  <span className="minutes" id="minute">
-                    {m}
-                  </span>
-                  <div className="smallText">Minutes</div>
-                </div>
-                <div>
-                  <span className="seconds" id="second">
-                    {s}
-                  </span>
-                  <div className="smallText">Seconds</div>
-                </div>
+                <div className="counterDate">December 10th 01PM (UTC)</div>
               </div>
-              <div className="counterDate">December 10th 01PM (UTC)</div>
-            </div>
+            )}
+            {openFlag && containData && containData.openStatus > 0 && (
+              <div className="openWrap">
+                <div className="openTitle">{containData.mintCount} Villages are sold.</div>
+                <div className="openSubtitle">
+                  {containData.openStatus == 1 || containData.openStatus == 2 ? (
+                    <span>0001~3000 : 35 ADA</span>
+                  ) : (
+                    "0001~3000 : 35 ADA"
+                  )}{" "}
+                  <br />
+                  {containData.openStatus == 3 || containData.openStatus == 4 ? (
+                    <span>3001~6000 : 40 ADA</span>
+                  ) : (
+                    "3001~6000 : 40 ADA"
+                  )}{" "}
+                  <br />
+                  {containData.openStatus == 5 || containData.openStatus == 6 ? (
+                    <span>6001~10000 : 45 ADA</span>
+                  ) : (
+                    "6001~10000 : 45 ADA"
+                  )}{" "}
+                  <br />
+                </div>
+                <br />
+                {containData.openStatus % 2 == 1 ? (
+                  containData.openStatus == 5 && soldOut ? (
+                    <button className="btnPreparing">{"SoldOut"}</button>
+                  ) : (
+                    <button className="btnBuy" onClick={getAddressAction}>
+                      Buy Now!
+                    </button>
+                  )
+                ) : containData.openStatus != 6 ? (
+                  <button className="btnPreparing"> "Preparing Open" </button>
+                ) : (
+                  <button className="btnPreparing">{soldOut ? "SoldOut" : "Closed"}</button>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
