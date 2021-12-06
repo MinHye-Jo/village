@@ -66,14 +66,14 @@
       -o-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
       position: relative;
-      cursor: pointer;
       line-height: 43px;
       color: #fff;
       font-size: 15px;
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
+
+      padding: 0 30px;
       button {
-        padding: 0 30px;
         line-height: 43px;
         color: #fff;
         font-size: 15px;
@@ -133,7 +133,7 @@
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         background: #fff;
-        width: 160px;
+        width: fit-content;
         padding: 20px 0;
         border-radius: 10px;
         -webkit-box-shadow: 0px 0px 10px rgba(17, 170, 139, 0.15);
@@ -150,6 +150,7 @@
           -webkit-transition: all 0.2s ease-in-out;
           -o-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
+          white-space: nowrap;
         }
         button:hover {
           color: #11aa8b;
@@ -170,9 +171,9 @@
     }
     .btnLnb:hover > button {
       color: #11aa8b;
-      .lnbBorder {
-        background: #11aa8b;
-      }
+    }
+    .btnLnb:hover .lnbBorder {
+      background: #11aa8b;
     }
 
     .btnLogin {
@@ -336,7 +337,7 @@
   }
 }
 @media all and (max-width: 1279px) {
-  .headerWrap .lnbArea .btnLnb > button {
+  .headerWrap .lnbArea .btnLnb {
     padding: 0 20px;
   }
 }
