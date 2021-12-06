@@ -25,6 +25,7 @@ import Roadmap from "./screens/Roadmap";
 import TeamMember from "./screens/TeamMember";
 import Collection from "./screens/Collection";
 import ContinentalMap from "./screens/ContinentalMap";
+import Guide from "./screens/Guide";
 import Faq from "./screens/Faq";
 import ComingSoon from "./screens/ComingSoon";
 import Footer from "./screens/frame/Footer";
@@ -46,6 +47,7 @@ function App() {
         <Route path="/ComingSoon" component={ComingSoon} />
         <Route path="/TeamMember" component={TeamMember} />
         <Route path="/ContinentalMap" component={ContinentalMap} />
+        <Route path="/Guide" component={Guide} />
         <Route path="/Faq" component={Faq} />
         <Footer />
       </RecoilRoot>
