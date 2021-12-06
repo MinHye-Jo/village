@@ -6,7 +6,6 @@ function QrModal({ data, open, onClose, onAction }) {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
-    console.log(data);
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       // Unbind the event listener on clean up

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/css/subpageTop.scss";
 import DetailModal from "./components/DetailModal";
 
@@ -25,6 +25,9 @@ function Collection() {
   // 필터 변경 플레그 체크
   const [filterFlag, setFilterFlag] = useState(false);
 
+  // 필터 영역밖 클릭시 닫기
+  const wrapperRef = useRef(null);
+
   // 초기 데이터 조회
   useEffect(() => {
     (async () => {
@@ -32,9 +35,26 @@ function Collection() {
     })();
   }, []);
 
+  // 초기 데이터 조회
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [filterOpen]);
+
+  // 영역 밖 클릭시 모달창 닫기
+  function handleClickOutside(event) {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      if (filterOpen) setFilterOpen(false);
+    }
+  }
+
   // 코인 리스트 조회
   const searchAction = async () => {
     setFilterFlag(false);
+    setFilterOpen(false);
 
     const { data } = await ntfList(searchData);
     if (data && data.return_code === 200) {
@@ -104,7 +124,7 @@ function Collection() {
               Filter&nbsp;
               <div className="rotate4" />
             </div>
-            <div className="filterArea" style={{ display: filterOpen ? "block" : "none" }}>
+            <div className="filterArea" style={{ display: filterOpen ? "block" : "none" }} ref={wrapperRef}>
               <div className="btnFilterClose" onClick={() => setFilterOpen(false)}>
                 Filter&nbsp;
                 <div className="rotate3" />
