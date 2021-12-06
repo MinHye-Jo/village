@@ -138,7 +138,9 @@ function Main(props) {
             )}
             {openFlag && containData && containData.openStatus > 0 && (
               <div className="openWrap">
-                <div className="openTitle">{containData.mintCount} Villages are sold.</div>
+                {containData.openStatus == 5 || containData.openStatus == 6 ? (
+                  <div className="openTitle">{containData.mintCount} Villages are sold.</div>
+                ) : null}
                 <div className="openSubtitle">
                   {containData.openStatus == 1 || containData.openStatus == 2 ? (
                     <span>0001~3000 : 35 ADA</span>
