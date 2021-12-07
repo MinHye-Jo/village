@@ -4,7 +4,7 @@ import QrModal from "./components/QrModal";
 
 import { collectionInfo, getAddress } from "../services/collection";
 
-const dday = new Date("Decemver 10, 2021, 13:00:00"); //디데이
+const dday = new Date("December 10, 2021, 13:00:00"); //디데이
 // UTC 타입 현재 날짜 (고정)
 const curr = new Date();
 const today = new Date(curr.getTime() + curr.getTimezoneOffset() * 60 * 1000);
@@ -67,7 +67,7 @@ function Main(props) {
       const distance = dday.getTime() - now;
 
       if (distance <= 0) {
-        setOpenFlag(false);
+        setOpenFlag(true);
         clearInterval(countTimerRef.current);
         return;
       }
