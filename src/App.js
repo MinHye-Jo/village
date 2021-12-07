@@ -41,6 +41,7 @@ function App() {
         <Header />
         {isIE || isEdge ? alert("IE / Edge is not supported. Download Chrome/Opera/Firefox") : null}
         <Route exact path="/" component={Main} />
+        <Route exact path="/test/:pId?" component={Main} />
         <Route path="/Collection" component={Collection} />
         <Route path="/AboutProject" component={AboutProject} />
         <Route path="/Roadmap" component={Roadmap} />

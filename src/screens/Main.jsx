@@ -14,7 +14,10 @@ console.log(today);
 
 function Main(props) {
   // 오픈 확인
-  const [openFlag, setOpenFlag] = useState(false);
+
+  const { params } = props.match;
+
+  const [openFlag, setOpenFlag] = useState(params.pId === "900000" ? true : false);
 
   // 팝업제어
   const [qrOpen, setQrOpen] = useState(false);
