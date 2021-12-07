@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import "../../styles/css/popup.scss";
+import QRCode from "react-qr-code";
 import TextareaAutosize from "react-textarea-autosize";
 
 function QrModal({ data, open, onClose, onAction }) {
@@ -31,7 +32,7 @@ function QrModal({ data, open, onClose, onAction }) {
             Send Ada using the information below.
           </div>
           <div className="popupCode">
-            <img src="/img/code.png" alt="QRcode" />
+            <QRCode value={data.addressId ? data.addressId : ""} size={130} />
           </div>
           <div className="popupText">
             <div className="popupSubtitle">

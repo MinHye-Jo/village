@@ -59,7 +59,6 @@ function Collection() {
     const { data } = await ntfList(searchData);
     if (data && data.return_code === 200) {
       if (data.response.length > 0) {
-        console.log(data.response[data.response.length - 1]);
         setSearchData({ ...searchData, priority: data.response[data.response.length - 1].priority });
       }
       setCollectionData(data.response);

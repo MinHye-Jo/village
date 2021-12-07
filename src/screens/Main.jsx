@@ -40,7 +40,6 @@ function Main(props) {
 
       const { data } = await collectionInfo({ collectionId: 42 });
       if (data && data.return_code === 200) {
-        console.log(data.response[0]);
         const res = data.response[0];
         if (res.openStatus == 6) {
           if (res.mintCount == res.targetQuantity) {
