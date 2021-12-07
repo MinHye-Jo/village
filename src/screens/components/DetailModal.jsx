@@ -53,7 +53,7 @@ function DetailModal({ data, open, onClose, onAction }) {
               </div>
               <div className="row half">
                 <div className="boxGreen">
-                  <div className="title">Theme</div>
+                  <div className="title">time</div>
                   <div className="value">{data && data.param4}</div>
                 </div>
               </div>
