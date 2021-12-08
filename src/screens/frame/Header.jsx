@@ -50,10 +50,10 @@ function Header() {
               <button onClick={() => (window.location.href = "/teamMember")}>Team Member</button>
             </div>
           </div>
-          {/* <div className="btnLnb">
+          <div className="btnLnb">
             <button onClick={() => (window.location.href = "/collection")}>Collection</button>
             <div className="lnbBorder" />
-          </div> */}
+          </div>
           <div className="btnLnb">
             <button onClick={() => (window.location.href = "/continentalMap")}>Cardano Village Map</button>
             <div className="lnbBorder" />
@@ -108,9 +108,9 @@ function Header() {
                     Team Member
                   </button>
                 </div>
-                {/* <button className="btnLnb" onClick={() => (window.location.href = "/collection")}>
+                <button className="btnLnb" onClick={() => (window.location.href = "/collection")}>
                   Collection
-                </button> */}
+                </button>
                 <button className="btnLnb" onClick={() => setSub2Open(!sub2Open)}>
                   Cardano Village Map <div className={sub2Open ? "rotate" : "rotate2"} />
                 </button>
