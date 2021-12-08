@@ -5,20 +5,7 @@ import { RecoilRoot } from "recoil";
 import ReactGA from "react-ga";
 
 import Header from "./screens/frame/Header";
-// 기본 메인
-import Index from "./screens/Index";
-// 카운트다운 들어간 메인
 import Main from "./screens/Main";
-// 오픈 1차 메인
-import MainOpen1st from "./screens/MainOpen1st";
-// 오픈 1차 마감 메인
-import MainOpen1stClosing from "./screens/MainOpen1stClosing";
-// 오픈 2차 메인
-import MainOpen2st from "./screens/MainOpen2st";
-// 오픈 2차 마감 메인
-import MainOpen2stClosing from "./screens/MainOpen2stClosing";
-// 오픈 3차 메인
-import MainOpen3st from "./screens/MainOpen3st";
 
 import AboutProject from "./screens/AboutProject";
 import Roadmap from "./screens/Roadmap";
