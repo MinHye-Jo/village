@@ -24,7 +24,7 @@ function Footer() {
         <address>
           Team Cardanian Korea
           <br />
-          Copyright ⓒ 2021 Cardanian.kr Allrights reserved.
+          Copyright ⓒ 2021 Cardanian.kr All rights reserved.
         </address>
       </div>
     </footer>

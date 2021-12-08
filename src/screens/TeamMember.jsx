@@ -35,7 +35,7 @@ function TeamMember() {
                 <span>COMMUNITY, MARKETING, Co-founder</span>
               </div>
               <div className="memberText">
-                IT experts such as finance, telecommunications, and in-house consulting.
+                IT expert such as finance, telecommunications, and in-house consulting.
                 <br />
                 He worked for the world's top 50 financial and telecommunications companies and is a passionate person
                 for blockchain and NFT.
