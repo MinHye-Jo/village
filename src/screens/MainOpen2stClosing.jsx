@@ -74,7 +74,13 @@ function MainOpen2stClosing() {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village1.png" alt="collection" />
+                  <img
+                    src="/img/village1.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>
@@ -82,7 +88,13 @@ function MainOpen2stClosing() {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village2.png" alt="collection" />
+                  <img
+                    src="/img/village2.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>
@@ -90,7 +102,13 @@ function MainOpen2stClosing() {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village3.png" alt="collection" />
+                  <img
+                    src="/img/village3.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>
@@ -98,7 +116,13 @@ function MainOpen2stClosing() {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village4.png" alt="collection" />
+                  <img
+                    src="/img/village4.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>
@@ -106,7 +130,13 @@ function MainOpen2stClosing() {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village5.png" alt="collection" />
+                  <img
+                    src="/img/village5.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>

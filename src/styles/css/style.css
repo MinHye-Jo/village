@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Noto+Sans:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,14 @@
   word-break: keep-all;
   vertical-align: top;
   letter-spacing: -0.025em;
+}
+img {
+  -webkit-touch-callout: none !important;
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: -moz-none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
 }
 button {
   outline: none;

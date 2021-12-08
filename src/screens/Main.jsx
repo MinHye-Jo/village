@@ -78,7 +78,7 @@ function Main(props) {
       setS(
         Math.floor((distance % (1000 * 60)) / 1000) < 10
           ? `0${Math.floor((distance % (1000 * 60)) / 1000)}`
-          : Math.floor((distance % (1000 * 60)) / 1000),
+          : Math.floor((distance % (1000 * 60)) / 1000)
       );
     }, 1000);
   };
@@ -228,7 +228,13 @@ function Main(props) {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village1.png" alt="collection" />
+                  <img
+                    src="/img/village1.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>
@@ -236,7 +242,13 @@ function Main(props) {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village2.png" alt="collection" />
+                  <img
+                    src="/img/village2.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>
@@ -244,7 +256,13 @@ function Main(props) {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village3.png" alt="collection" />
+                  <img
+                    src="/img/village3.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>
@@ -252,7 +270,13 @@ function Main(props) {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village4.png" alt="collection" />
+                  <img
+                    src="/img/village4.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>
@@ -260,7 +284,13 @@ function Main(props) {
               <button>
                 <div className="collectionImg">
                   <div className="example" />
-                  <img src="/img/village5.png" alt="collection" />
+                  <img
+                    src="/img/village5.png"
+                    alt="collection"
+                    oncontextmenu="return false"
+                    ondragstart="return false"
+                    onselectstart="return false"
+                  />
                 </div>
               </button>
             </div>

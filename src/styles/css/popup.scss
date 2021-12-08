@@ -8,6 +8,14 @@
   top: 0;
   left: 0;
   z-index: 200;
+  img {
+    -webkit-touch-callout: none !important;
+    pointer-events: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: -moz-none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
   .popupArea {
     width: 600px;
     max-height: 80vh;
@@ -56,6 +64,12 @@
       img {
         max-width: 100%;
         border-radius: 15px;
+        -webkit-touch-callout: none !important;
+        pointer-events: none !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: -moz-none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
       }
       .soldOut {
         position: absolute;

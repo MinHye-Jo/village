@@ -6,6 +6,14 @@
   position: relative;
   background: -o-linear-gradient(150deg, #103a69, #678cc9, #75ccff);
   background: linear-gradient(300deg, #103a69, #678cc9, #75ccff);
+  img {
+    -webkit-touch-callout: none !important;
+    pointer-events: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: -moz-none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
   .mainBg {
     width: 100%;
     min-width: 280px;
@@ -233,6 +241,12 @@
     img {
       max-width: 100%;
       border-radius: 15px;
+      -webkit-touch-callout: none !important;
+      pointer-events: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: -moz-none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
     }
   }
   .cardName {
@@ -254,6 +268,12 @@
     img {
       max-width: 100%;
       border-radius: 15px;
+      -webkit-touch-callout: none !important;
+      pointer-events: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: -moz-none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
     }
     .example {
       position: absolute;

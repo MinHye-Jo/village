@@ -178,7 +178,13 @@ function Collection() {
                           className="soldOut"
                           style={{ display: o.targetQuantity == o.mintCount ? "block" : "none" }}
                         />
-                        <img src={o.thumnailUrl} alt="collection" />
+                        <img
+                          src={o.thumnailUrl}
+                          alt="collection"
+                          oncontextmenu="return false"
+                          ondragstart="return false"
+                          onselectstart="return false"
+                        />
                       </div>
                     </div>
                   </div>

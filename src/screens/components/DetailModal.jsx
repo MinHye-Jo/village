@@ -28,7 +28,13 @@ function DetailModal({ data, open, onClose, onAction }) {
             <div className="cardImg">
               {/*  sold out 이면 display:block; 아니면 display:block*/}
               <div className="soldOut" style={{ display: "none" }} />
-              <img src={data && data.imgUrl} alt="collection" />
+              <img
+                src={data && data.imgUrl}
+                alt="collection"
+                oncontextmenu="return false"
+                ondragstart="return false"
+                onselectstart="return false"
+              />
             </div>
           </div>
           <div className="popupText">
