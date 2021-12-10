@@ -13,6 +13,11 @@
   vertical-align: top;
   letter-spacing: -0.025em;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 img {
   -webkit-touch-callout: none !important;
   pointer-events: none !important;
