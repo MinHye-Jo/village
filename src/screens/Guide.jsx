@@ -53,7 +53,11 @@ function Guide() {
             </div>
             <br />
             <div className="guideImg">
-              <img src="/img/guide3.jpg" alt="guide"></img>
+              <img src="/img/guide3.jpg" alt="guide" />
+              <div className="guideName">
+                <br />
+                <b> ※ Please refer to the detailed steps in Faq.</b>
+              </div>
             </div>
           </div>
         </div>

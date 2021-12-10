@@ -369,6 +369,7 @@
   .guideImg {
     display: inline-block;
     width: 30%;
+    position: relative;
     img {
       max-width: 100%;
       -webkit-box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
@@ -395,6 +396,13 @@
       }
     }
   }
+}
+.guideName b {
+  color: #666;
+  font-size: 16px;
+  width: 100%;
+  font-weight: 400;
+  display: inline-block;
 }
 .wrapBlue {
   width: 100%;
@@ -766,7 +774,6 @@
         font-size: 14px;
         line-height: 40px;
         color: #81b49e;
-        background: #fff;
         font-family: "Noto Sans", sans-serif;
         border: solid 2px #e7f1ec;
         font-weight: 700;
@@ -778,7 +785,6 @@
       select:focus {
         border: solid 2px #81b49e;
         outline: none;
-        background: #fff;
         color: #222;
       }
       .btnFilterSearch {
@@ -1013,6 +1019,11 @@
   }
   .guideWrap .guideTitle .guideName {
     font-size: 16px;
+  }
+  .guideName b {
+    font-size: 13px;
+    line-height: 16px;
+    display: inline-block;
   }
   .aboutWrap .row.half img {
     width: 50%;
