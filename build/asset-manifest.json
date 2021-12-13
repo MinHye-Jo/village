@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6859293.chunk.css",
-    "main.js": "/static/js/main.8292fef1.chunk.js",
-    "main.js.map": "/static/js/main.8292fef1.chunk.js.map",
+    "main.css": "/static/css/main.43f235d5.chunk.css",
+    "main.js": "/static/js/main.7c6d2ad1.chunk.js",
+    "main.js.map": "/static/js/main.7c6d2ad1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4f2e809e.js",
     "runtime-main.js.map": "/static/js/runtime-main.4f2e809e.js.map",
     "static/js/2.09e4c135.chunk.js": "/static/js/2.09e4c135.chunk.js",
     "static/js/2.09e4c135.chunk.js.map": "/static/js/2.09e4c135.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.d6859293.chunk.css.map": "/static/css/main.d6859293.chunk.css.map",
+    "static/css/main.43f235d5.chunk.css.map": "/static/css/main.43f235d5.chunk.css.map",
     "static/js/2.09e4c135.chunk.js.LICENSE.txt": "/static/js/2.09e4c135.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/static/media/mainImgRight.d80137aa.png",
     "static/media/style.css": "/static/media/iconTwitter.7f71cb5e.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.4f2e809e.js",
     "static/js/2.09e4c135.chunk.js",
-    "static/css/main.d6859293.chunk.css",
-    "static/js/main.8292fef1.chunk.js"
+    "static/css/main.43f235d5.chunk.css",
+    "static/js/main.7c6d2ad1.chunk.js"
   ]
 }
