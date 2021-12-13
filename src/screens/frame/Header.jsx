@@ -55,8 +55,11 @@ function Header() {
             <div className="lnbBorder" />
           </div>
           <div className="btnLnb">
-            <button onClick={() => (window.location.href = "/eventChristmas")}>Christmas Event</button>
+            <button onClick={() => (window.location.href = "/eventChristmas")}>Event</button>
             <div className="lnbBorder" />
+            <div className="submenu">
+              <button onClick={() => (window.location.href = "/eventChristmas")}>Christmas Event</button>
+            </div>
           </div>
           <div className="btnLnb">
             <button>Cardano Village Map</button>
@@ -78,7 +81,7 @@ function Header() {
               onClick={() =>
                 window.open(
                   "https://cardanoscan.io/tokenPolicy/2c763e2db8337324df122fffa38e0d97ecdf53d139025a0e1b6d6b97",
-                  "_blank",
+                  "_blank"
                 )
               }
             >
@@ -151,7 +154,7 @@ function Header() {
                   onClick={() =>
                     window.open(
                       "https://cardanoscan.io/tokenPolicy/2c763e2db8337324df122fffa38e0d97ecdf53d139025a0e1b6d6b97",
-                      "_blank",
+                      "_blank"
                     )
                   }
                 >
