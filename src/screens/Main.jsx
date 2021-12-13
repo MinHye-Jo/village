@@ -14,10 +14,7 @@ console.log(today);
 
 function Main(props) {
   // 오픈 확인
-
-  const { params } = props.match;
-
-  const [openFlag, setOpenFlag] = useState(params.pId === "900000" ? true : false);
+  const [openFlag, setOpenFlag] = useState(false);
 
   // 팝업제어
   const [qrOpen, setQrOpen] = useState(false);
@@ -78,7 +75,7 @@ function Main(props) {
       setS(
         Math.floor((distance % (1000 * 60)) / 1000) < 10
           ? `0${Math.floor((distance % (1000 * 60)) / 1000)}`
-          : Math.floor((distance % (1000 * 60)) / 1000)
+          : Math.floor((distance % (1000 * 60)) / 1000),
       );
     }, 1000);
   };
@@ -104,7 +101,7 @@ function Main(props) {
             <div className="mainLogo"></div>
             <br />
             <span>Cardano</span>Village
-            {!openFlag && (
+            {/* {!openFlag && (
               <div className="mainCount">
                 <div className="countTitle titleWhite">COMING SOON</div>
                 <div className="counter">
@@ -135,8 +132,8 @@ function Main(props) {
                 </div>
                 <div className="counterDate">December 10th 01PM (UTC)</div>
               </div>
-            )}
-            {openFlag && containData && containData.openStatus > 0 && (
+            )} */}
+            {containData && containData.openStatus > 0 && (
               <div className="openWrap">
                 {containData.openStatus == 5 || containData.openStatus == 6 ? (
                   <div className="openTitle">{containData.mintCount} Villages are sold.</div>
@@ -171,7 +168,7 @@ function Main(props) {
                     </button>
                   )
                 ) : containData.openStatus != 6 ? (
-                  <button className="btnPreparing"> "Preparing Open" </button>
+                  <button className="btnPreparing"> Preparing Open </button>
                 ) : (
                   <button className="btnPreparing">{soldOut ? "SoldOut" : "Closed"}</button>
                 )}

@@ -74,6 +74,19 @@ function Header() {
             <div className="lnbBorder" />
           </div>
           <div className="btnLnb">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://cardanoscan.io/tokenPolicy/2c763e2db8337324df122fffa38e0d97ecdf53d139025a0e1b6d6b97",
+                  "_blank",
+                )
+              }
+            >
+              Status
+            </button>
+            <div className="lnbBorder" />
+          </div>
+          <div className="btnLnb">
             <button>Contact</button>
             <div className="lnbBorder" />
             <div className="submenu">
@@ -132,6 +145,17 @@ function Header() {
                 </button>
                 <button className="btnLnb" onClick={() => (window.location.href = "/faq")}>
                   FAQ
+                </button>
+                <button
+                  className="btnLnb"
+                  onClick={() =>
+                    window.open(
+                      "https://cardanoscan.io/tokenPolicy/2c763e2db8337324df122fffa38e0d97ecdf53d139025a0e1b6d6b97",
+                      "_blank",
+                    )
+                  }
+                >
+                  Status
                 </button>
                 <button className="btnLnb">Contact</button>
                 <div className="footerIcon">
