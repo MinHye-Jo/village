@@ -92,8 +92,35 @@ function Main(props) {
     }
   };
 
+  // 눈내리는 이펙트
+  const Snowflake = ({ style }) => {
+    return (
+      <p className="snow-flake" style={style}>
+        {"\u2745"}
+      </p>
+    );
+  };
+
+  const makeSnowFlakes = () => {
+    let animationDelay = "0s";
+    let fontSize = "14px";
+    // length가 15인 array가 생성
+    const arr = Array.from("Merry Christmas");
+
+    return arr.map((el, i) => {
+      animationDelay = `${(Math.random() * 10).toFixed(2)}s`; // 0~16 사이에서 소수점 2번째 자리수까지의 랜덤숫자
+      fontSize = `${Math.floor(Math.random() * 10) + 12}px`; // 10~20 사이의 정수
+      const style = {
+        animationDelay,
+        fontSize,
+      };
+      return <Snowflake key={i} style={style} />;
+    });
+  };
+
   return (
     <div className="wrap">
+      <div className="snow-container">{makeSnowFlakes()}</div>
       <QrModal data={qrData} open={qrOpen} onClose={() => setQrOpen(false)} />
       <div className="main">
         <div className="mainWrap">
