@@ -15,6 +15,7 @@ import ContinentalMap from "./screens/ContinentalMap";
 import Guide from "./screens/Guide";
 import Faq from "./screens/Faq";
 import ComingSoon from "./screens/ComingSoon";
+import EventChristmas from "./screens/eventChristmas";
 import Footer from "./screens/frame/Footer";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/ContinentalMap" component={ContinentalMap} />
         <Route path="/Guide" component={Guide} />
         <Route path="/Faq" component={Faq} />
+        <Route path="/EventChristmas" component={EventChristmas} />
         <Footer />
       </RecoilRoot>
     </BrowserRouter>

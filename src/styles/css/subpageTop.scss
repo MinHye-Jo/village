@@ -201,6 +201,10 @@
 .contentsTitle.white {
   color: #fff;
 }
+
+.contentsTitle.event {
+  margin-bottom: 50px;
+}
 .roadmap {
   width: 100%;
   min-width: 280px;
@@ -404,16 +408,16 @@
   font-weight: 400;
   display: inline-block;
 }
-.wrapBlue {
+.wrapDeepGreen {
   width: 100%;
   min-width: 280px;
-  background: #def5ff;
+  background: #e0efe8;
   position: relative;
   margin-top: 50px;
   padding-top: 50px;
 
   .contentsWrap .contentsTitle {
-    color: #3a8fff;
+    color: #11aa8b;
   }
 }
 .map1 {
@@ -430,14 +434,15 @@
   background: url(../img/blueTop.svg) bottom repeat-x;
   background-size: 605px;
 }
-.skyblueLine {
+.greenLine {
   width: 100%;
   height: 60px;
   position: absolute;
   top: -50px;
-  background: url(../img/skyblueTop.svg) bottom repeat-x;
+  background: url(../img/greenTop.svg) bottom repeat-x;
   background-size: 605px;
 }
+
 @-webkit-keyframes animap {
   0% {
     -webkit-transform: translate(0, 0);
@@ -603,6 +608,129 @@
       }
     }
   }
+}
+.eventWrap {
+  font-size: 0;
+  position: relative;
+  .row.half {
+    width: 40%;
+    display: inline-block;
+    img {
+      width: 70%;
+      border-radius: 10%;
+    }
+    .eventText {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      font-size: 16px;
+      text-align: left;
+      line-height: 20px;
+      color: #888888;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      span {
+        color: #222;
+      }
+      .btnEvent {
+        padding: 0 60px;
+        background: #d1131d;
+        color: #fff;
+        border-radius: 30px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 60px;
+        -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.26);
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.26);
+        margin-top: 20px;
+        -webkit-transition: all 0.15s ease-in-out;
+        -o-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+      }
+    }
+  }
+}
+.wrapEvent {
+  width: 100%;
+  margin-top: 40px;
+  font-size: 0;
+  text-align: left;
+}
+.eventArea {
+  width: 20%;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  button {
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    -webkit-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    -webkit-box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
+    box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
+  }
+  .eventImg {
+    width: 100%;
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      -webkit-touch-callout: none !important;
+      pointer-events: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: -moz-none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+    }
+  }
+  .eventImg {
+    width: 100%;
+    position: relative;
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      -webkit-touch-callout: none !important;
+      pointer-events: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: -moz-none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+    }
+  }
+}
+.btnViewMoreEvent {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 60px;
+  background: #fff;
+  color: #d1131d;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 50px;
+  margin-top: 30px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+.btnViewMoreEvent:hover {
+  background: #d1131d;
+  color: #fff;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 .collectionTop {
   text-align: right;
@@ -837,6 +965,9 @@
   .guideWrap .guideTitle {
     width: 70%;
   }
+  .eventArea {
+    width: 25%;
+  }
 }
 @media all and (max-width: 1023px) {
   .collectionArea {
@@ -846,6 +977,16 @@
     margin: 60px 0;
   }
   .aboutWrap .row.half .aboutText {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .eventWrap {
+    margin: 60px 0;
+  }
+  .eventWrap .row.half {
+    width: 50%;
+  }
+  .eventWrap .row.half .eventText {
     font-size: 14px;
     line-height: 18px;
   }
@@ -875,6 +1016,9 @@
       line-height: 18px;
       padding: 10px;
     }
+  }
+  .eventArea {
+    width: 33.333333%;
   }
 }
 @media all and (max-width: 850px) {
@@ -972,11 +1116,38 @@
       }
     }
   }
-  .btnViewMore {
+  .contentsTitle.event {
+    margin-bottom: 20px;
+  }
+  .eventWrap {
+    margin: 0;
+
+    .row.half {
+      width: 100%;
+      img {
+        width: 40%;
+      }
+      .eventText {
+        margin-top: 30px;
+        position: inherit;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        .btnEvent {
+          font-size: 16px;
+          line-height: 45px;
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+  .btnViewMore,
+  .btnViewMoreEvent {
     font-size: 16px;
     line-height: 45px;
     padding: 0 30px;
   }
+
   .collectionTop .filterWrap {
     margin-right: 10px;
   }
@@ -989,6 +1160,12 @@
   .collectionTop .filterWrap .btnFilter,
   .collectionTop .filterWrap .btnFilterClose {
     padding: 0 20px;
+  }
+  .eventArea {
+    padding: 5px;
+    button {
+      padding: 5px;
+    }
   }
 }
 @media all and (max-width: 604px) {
@@ -1028,6 +1205,9 @@
   .aboutWrap .row.half img {
     width: 50%;
   }
+  .eventWrap .row.half img {
+    width: 50%;
+  }
   .faqWrap .faqLeft {
     width: 15%;
   }
@@ -1037,6 +1217,9 @@
 }
 @media all and (max-width: 530px) {
   .collectionArea {
+    width: 50%;
+  }
+  .eventArea {
     width: 50%;
   }
 }
