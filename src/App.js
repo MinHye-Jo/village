@@ -15,7 +15,7 @@ import ContinentalMap from "./screens/ContinentalMap";
 import Guide from "./screens/Guide";
 import Faq from "./screens/Faq";
 import ComingSoon from "./screens/ComingSoon";
-import EventChristmas from "./screens/eventChristmas";
+import EventChristmas from "./screens/EventChristmas";
 import Footer from "./screens/frame/Footer";
 
 function App() {
