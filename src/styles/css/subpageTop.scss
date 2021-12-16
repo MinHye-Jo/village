@@ -204,6 +204,7 @@
 
 .contentsTitle.event {
   margin-bottom: 50px;
+  color: #81b49e;
 }
 .roadmap {
   width: 100%;
@@ -610,10 +611,17 @@
   }
 }
 .eventWrap {
+  width: fit-content;
+  padding: 40px;
   font-size: 0;
   position: relative;
+  display: inline-block;
+  -webkit-box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
+  box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
+  border-radius: 20px;
+  border: solid 3px #e0efe8;
   .row.half {
-    width: 40%;
+    width: 100%;
     display: inline-block;
     img {
       width: 70%;
@@ -621,23 +629,40 @@
     }
     .eventText {
       font-family: "Montserrat", sans-serif;
-      font-weight: 700;
+      font-weight: 400;
       letter-spacing: -0.025em;
       font-size: 16px;
       text-align: left;
       line-height: 20px;
       color: #888888;
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      span {
+      word-break: keep-all;
+      width: 460px;
+      display: inline-block;
+      b {
+        font-weight: 700;
         color: #222;
+      }
+      .ee2 {
+        font-weight: 700;
+        text-align: left;
+        width: fit-content;
+        display: inline-block;
+        color: #81b49e;
+      }
+      .ee {
+        b {
+          font-weight: 700;
+        }
+        text-align: left;
+        word-break: break-all;
+        display: inline-block;
+        width: fit-content;
+        color: #222;
+        font-size: 14px;
       }
       .btnEvent {
         padding: 0 60px;
-        background: #d1131d;
+        background: #d74a50;
         color: #fff;
         border-radius: 30px;
         font-family: "Montserrat", sans-serif;
@@ -646,92 +671,190 @@
         line-height: 60px;
         -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.26);
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.26);
-        margin-top: 20px;
+        margin-top: 40px;
         -webkit-transition: all 0.15s ease-in-out;
         -o-transition: all 0.15s ease-in-out;
         transition: all 0.15s ease-in-out;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .btnEvent:hover {
+        -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.26);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.26);
       }
     }
   }
 }
+.ecountTitle {
+  letter-spacing: -0.025em;
+  font-family: "Montserrat", sans-serif;
+  color: #81b49e;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+.emainCount {
+  text-align: center;
+}
+.ecounter {
+  color: #81b49e;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+}
+.ecounter > div {
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  span {
+    padding: 10px;
+    background: #e0efe8;
+    display: inline-block;
+    min-width: 60px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #81b49e;
+    border-radius: 50%;
+  }
+}
+.ecounter .esmallText {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #81b49e;
+}
+.ecounterDate {
+  letter-spacing: -0.025em;
+  line-height: 1.71;
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .wrapEvent {
-  width: 100%;
+  width: 50%;
   margin-top: 40px;
   font-size: 0;
-  text-align: left;
-}
-.eventArea {
-  width: 20%;
+  padding: 10px;
   display: inline-block;
+  .event {
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    -webkit-box-shadow: 0px 0px 20px rgba(129, 180, 158, 0.2);
+    box-shadow: 0px 0px 20px rgba(129, 180, 158, 0.2);
+  }
+  .eventDetailText {
+    font-size: 14px;
+    color: #888888;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+  }
+  .eventDetailSubtitle {
+    font-size: 0;
+    text-align: left;
+    .row {
+      display: inline-block;
+      width: 100%;
+      padding: 5px 0;
+    }
+    .row.half {
+      display: block;
+      width: 100%;
+      padding: 5px;
+      div {
+        display: inline-block;
+      }
+    }
+    .boxGreen {
+      padding: 10px;
+      background: #e9f4ef;
+      border-radius: 10px;
+      width: 100%;
+    }
+    .title {
+      display: inline-block;
+      width: 100%;
+      font-family: "Montserrat", sans-serif;
+      font-size: 11px;
+      color: #81b49e;
+      font-weight: 700;
+      word-break: keep-all;
+      text-align: left;
+    }
+    .value {
+      display: inline-block;
+      width: 100%;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+      word-break: keep-all;
+      color: #222;
+      position: relative;
+      text-align: left;
+    }
+  }
+}
+
+.eventArea {
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.eventArea.area60 {
+  width: 60%;
+}
+.eventArea.area40 {
+  width: 40%;
+}
+.eventDetailTitle {
+  font-size: 20px;
+  color: #81b49e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.eventImgWrap {
+  width: 100%;
+  background: #e0efe8;
+  border-radius: 20px;
   padding: 10px;
   -webkit-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
-  button {
-    width: 100%;
-    background: #fff;
-    border-radius: 20px;
-    padding: 10px;
-    -webkit-transition: all 0.15s ease-in-out;
-    -o-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
-    -webkit-box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
-    box-shadow: 0px 0px 10px rgba(129, 180, 158, 0.2);
-  }
-  .eventImg {
-    width: 100%;
-    img {
-      max-width: 100%;
-      border-radius: 15px;
-      -webkit-touch-callout: none !important;
-      pointer-events: none !important;
-      -webkit-user-select: none !important;
-      -moz-user-select: -moz-none !important;
-      -ms-user-select: none !important;
-      user-select: none !important;
-    }
-  }
-  .eventImg {
-    width: 100%;
-    position: relative;
-    img {
-      max-width: 100%;
-      border-radius: 15px;
-      -webkit-touch-callout: none !important;
-      pointer-events: none !important;
-      -webkit-user-select: none !important;
-      -moz-user-select: -moz-none !important;
-      -ms-user-select: none !important;
-      user-select: none !important;
-    }
-  }
-}
-.btnViewMoreEvent {
+  position: relative;
   display: inline-block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0 60px;
-  background: #fff;
-  color: #d1131d;
-  border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 50px;
-  margin-top: 30px;
-  -webkit-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
-  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+  .eventImg {
+    width: 100%;
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      -webkit-touch-callout: none !important;
+      pointer-events: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: -moz-none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+    }
+  }
 }
-.btnViewMoreEvent:hover {
-  background: #d1131d;
-  color: #fff;
-  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-}
+
 .collectionTop {
   text-align: right;
   .searchWrap {
@@ -1015,7 +1138,20 @@
   .eventArea {
     width: 25%;
   }
+  .eventArea.area60 {
+    width: 70%;
+  }
+  .eventArea.area40 {
+    width: 30%;
+  }
 }
+@media all and (max-width: 1100px) {
+  .eventArea.area60,
+  .eventArea.area40 {
+    width: 80%;
+  }
+}
+
 @media all and (max-width: 1023px) {
   .collectionArea {
     width: 33.333333%;
@@ -1030,12 +1166,13 @@
   .eventWrap {
     margin: 60px 0;
   }
-  .eventWrap .row.half {
-    width: 50%;
-  }
+
   .eventWrap .row.half .eventText {
     font-size: 14px;
     line-height: 18px;
+  }
+  .eventWrap .row.half .eventText .ee {
+    font-size: 12px;
   }
   .faqWrap {
     .faqLeft {
@@ -1074,9 +1211,14 @@
     }
   }
 }
+
 @media all and (max-width: 850px) {
   .memberWrap .memberTitle {
     width: 70%;
+  }
+  .eventArea.area60,
+  .eventArea.area40 {
+    width: 100%;
   }
 }
 @media all and (max-width: 767px) {
@@ -1177,19 +1319,18 @@
 
     .row.half {
       width: 100%;
+      text-align: center;
       img {
         width: 40%;
       }
       .eventText {
+        display: inline-block;
         margin-top: 30px;
-        position: inherit;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
         .btnEvent {
           font-size: 16px;
           line-height: 45px;
           padding: 0 30px;
+          margin-top: 20px;
         }
       }
     }
@@ -1221,6 +1362,32 @@
     }
   }
   .wrapMap .half3 {
+    width: 50%;
+  }
+  .wrapEvent {
+    width: 100%;
+    padding: 0;
+  }
+  .wrapEvent {
+    width: 60%;
+  }
+  .ecountTitle {
+    font-size: 20px;
+  }
+  .ecounter {
+    font-size: 20px;
+  }
+  .ecounter div > span {
+    min-width: 50px;
+    line-height: 30px;
+  }
+  .ecounter .smallText {
+    font-size: 10px;
+  }
+  .ecounterDate {
+    font-size: 14px;
+  }
+  .eventWrap .row.half img {
     width: 50%;
   }
 }
@@ -1270,6 +1437,18 @@
   .faqWrap .faqRight {
     width: 85%;
   }
+  .wrapEvent {
+    width: 80%;
+  }
+  .eventWrap .row.half img {
+    width: 60%;
+  }
+  .eventWrap .row.half .eventText {
+    width: 100%;
+  }
+  .eventWrap {
+    padding: 30px 10px;
+  }
 }
 @media all and (max-width: 530px) {
   .collectionArea {
@@ -1277,6 +1456,15 @@
   }
   .eventArea {
     width: 50%;
+  }
+  .wrapEvent {
+    width: 100%;
+  }
+  .wrapEvent .event {
+    padding: 20px;
+  }
+  .eventWrap .row.half img {
+    width: 75%;
   }
 }
 
@@ -1305,9 +1493,19 @@
   .faqWrap .faqRight {
     width: 75%;
   }
+  .wrapEvent .eventDetailSubtitle .row.half {
+    width: 100%;
+  }
+  .eventWrap .row.half img {
+    width: 70%;
+  }
 }
 @media all and (max-width: 310px) {
   .collectionTop .searchWrap {
     width: 126px;
+  }
+  .ecounter div > span {
+    min-width: 40px;
+    line-height: 20px;
   }
 }
