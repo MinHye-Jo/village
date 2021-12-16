@@ -23,12 +23,12 @@ function VillageMap() {
       </div>
       <div className="contentsWrap">
         <div className="contentsTitle">Village Map</div>
-        <div className="eventWrap">
+        <div className="mapWrap">
           <div className="row half">
             <img src="/img/map1.png" className="map1" alt="map" />
           </div>
           <div className="row half">
-            <div className="eventText">
+            <div className="mapText">
               · Description of the continent.
               <br />
               · Description of the village.

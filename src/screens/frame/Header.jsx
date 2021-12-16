@@ -66,6 +66,7 @@ function Header() {
             <div className="lnbBorder" />
             <div className="submenu">
               <button onClick={() => (window.location.href = "/continentalMap")}>Continental Map</button>
+              {/* <button onClick={() => (window.location.href = "/villageMap")}>Village Map</button> */}
             </div>
           </div>
           <div className="btnLnb">
@@ -141,6 +142,9 @@ function Header() {
                   <button className="subLnb" onClick={() => (window.location.href = "/continentalMap")}>
                     Continental Map
                   </button>
+                  {/* <button className="subLnb" onClick={() => (window.location.href = "/villageMap")}>
+                    Village Map
+                  </button> */}
                 </div>
 
                 <button className="btnLnb" onClick={() => (window.location.href = "/guide")}>

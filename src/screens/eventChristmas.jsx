@@ -83,7 +83,6 @@ function EventChristmas() {
             </div>
           </div>
         </div>
-
         <div className="subBg">
           <div className="subLeft" />
           <div className="subRight" />
@@ -94,7 +93,12 @@ function EventChristmas() {
           <div className="contentsTitle event">Christmas Event</div>
           <div className="row half">
             <div className="eventText">
-              <b>Merry Xmas! Let's enjoy it together.</b> <br />
+              <div className="b">
+                Hi, Cardanian. <br /> Christmas has come to Cardano.
+                <br /> Thank you for supporting Cardano Village.
+                <br /> We hope our event will smile you.
+              </div>
+              <br />
               <br />
               It is minted in two ways. <br />
               <div className="ee2">
