@@ -55,6 +55,10 @@ function Header() {
             <div className="lnbBorder" />
           </div>
           <div className="btnLnb">
+            <button onClick={() => (window.location.href = "/map")}>Map</button>
+            <div className="lnbBorder" />
+          </div>
+          <div className="btnLnb">
             <button onClick={() => (window.location.href = "/continentalMap")}>Cardano Village Map</button>
             <div className="lnbBorder" />
             <div className="submenu">

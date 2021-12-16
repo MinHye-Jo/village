@@ -13,6 +13,7 @@ import TeamMember from "./screens/TeamMember";
 import Collection from "./screens/Collection";
 import ContinentalMap from "./screens/ContinentalMap";
 import Guide from "./screens/Guide";
+import Map from "./screens/Map";
 import Faq from "./screens/Faq";
 import ComingSoon from "./screens/ComingSoon";
 import Footer from "./screens/frame/Footer";
@@ -29,6 +30,7 @@ function App() {
         {isIE || isEdge ? alert("IE / Edge is not supported. Download Chrome/Opera/Firefox") : null}
         <Route exact path="/" component={Main} />
         <Route path="/Collection" component={Collection} />
+        <Route path="/Map" component={Map} />
         <Route path="/AboutProject" component={AboutProject} />
         <Route path="/Roadmap" component={Roadmap} />
         <Route path="/ComingSoon" component={ComingSoon} />
