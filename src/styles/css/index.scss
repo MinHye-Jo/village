@@ -36,8 +36,8 @@
   min-width: 280px;
   height: 700px;
   position: relative;
-  background: -o-linear-gradient(150deg, #103a69, #678cc9, #75ccff);
-  background: linear-gradient(300deg, #103a69, #678cc9, #75ccff);
+  background: -o-linear-gradient(150deg, #0c2f55, #2d5a95, #257d95);
+  background: linear-gradient(300deg, #0c2f55, #2d5a95, #257d95);
 
   img {
     -webkit-touch-callout: none !important;
@@ -62,7 +62,7 @@
   .mainImgLeft {
     width: 730px;
     height: 600px;
-    background: url("../img/mainImgLeft.png") center no-repeat;
+    background: url("../img/mainImgLeft2.png") center no-repeat;
     background-size: contain;
     position: absolute;
     bottom: 0;
@@ -94,7 +94,7 @@
   .mainImgRight {
     width: 730px;
     height: 600px;
-    background: url("../img/mainImgRight.png") center no-repeat;
+    background: url("../img/mainImgRight2.png") center no-repeat;
     background-size: contain;
     position: absolute;
     top: 0;
@@ -330,6 +330,10 @@
   font-size: 20px;
   margin-top: 10px;
 }
+.openTitle.big {
+  font-size: 32px;
+  margin-top: 10px;
+}
 .openSubtitle {
   font-size: 16px;
   margin-top: 10px;
@@ -359,6 +363,9 @@
   -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
+.btnBuy.red {
+  background: #d74a50;
+}
 .btnPreparing {
   padding: 0 60px;
   background: #8da099;
@@ -380,6 +387,9 @@
   color: #fff;
   -webkit-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.26);
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.26);
+}
+.btnBuy.red:hover {
+  background: #d74a50;
 }
 .mainCount {
   margin-top: 20px;
@@ -453,10 +463,14 @@
       height: 601px;
     }
   }
+  .openTitle.big {
+    font-size: 24px;
+  }
   .main {
     .mainTitle {
       font-size: 45px;
     }
+
     .mainLogo {
       height: 60px;
     }

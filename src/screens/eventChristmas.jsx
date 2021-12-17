@@ -164,7 +164,6 @@ function EventChristmas() {
           <div className="row">
             <div className="wrapEvent">
               <div className="event">
-                <div className="eventDetailTitle">Merry Xmas #1</div>
                 <div className="eventArea area60">
                   <div className="eventImgWrap">
                     <div className="eventImg">
@@ -178,47 +177,11 @@ function EventChristmas() {
                     </div>
                   </div>
                 </div>
-                <div className="eventArea area40">
-                  <div className="eventDetailText">
-                    <div className="eventDetailSubtitle">
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">Continent</div>
-                          <div className="value">Byron</div>
-                        </div>
-                      </div>
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">Village</div>
-                          <div className="value">Charles</div>
-                        </div>
-                      </div>
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">Village Number</div>
-                          <div className="value">6024</div>
-                        </div>
-                      </div>
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">time</div>
-                          <div className="value">Noon</div>
-                        </div>
-                      </div>
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">Tree Color</div>
-                          <div className="value">Yellow</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div className="eventDetailTitle">CardanoVillage X-mas 2021 Dance</div>
               </div>
             </div>
             <div className="wrapEvent">
               <div className="event">
-                <div className="eventDetailTitle">Merry Xmas #2</div>
                 <div className="eventArea area60">
                   <div className="eventImgWrap">
                     <div className="eventImg">
@@ -232,42 +195,7 @@ function EventChristmas() {
                     </div>
                   </div>
                 </div>
-                <div className="eventArea area40">
-                  <div className="eventDetailText">
-                    <div className="eventDetailSubtitle">
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">Continent</div>
-                          <div className="value">Byron</div>
-                        </div>
-                      </div>
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">Village</div>
-                          <div className="value">Charles</div>
-                        </div>
-                      </div>
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">Village Number</div>
-                          <div className="value">6024</div>
-                        </div>
-                      </div>
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">time</div>
-                          <div className="value">Noon</div>
-                        </div>
-                      </div>
-                      <div className="row half">
-                        <div className="boxGreen">
-                          <div className="title">Tree Color</div>
-                          <div className="value">Yellow</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div className="eventDetailTitle">CardanoVillage X-mas 2021 Tired</div>
               </div>
             </div>
           </div>

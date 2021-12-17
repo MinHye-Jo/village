@@ -742,7 +742,7 @@
   width: 50%;
   margin-top: 40px;
   font-size: 0;
-  padding: 10px;
+  padding: 20px;
   display: inline-block;
   .event {
     text-align: center;
@@ -809,6 +809,7 @@
 }
 
 .eventArea {
+  display: none;
   text-align: center;
   display: inline-block;
   padding: 5px;
@@ -817,7 +818,7 @@
   transition: all 0.15s ease-in-out;
 }
 .eventArea.area60 {
-  width: 60%;
+  width: 80%;
 }
 .eventArea.area40 {
   width: 40%;
@@ -829,7 +830,7 @@
   font-weight: 700;
   text-align: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .eventImgWrap {
   width: 100%;
