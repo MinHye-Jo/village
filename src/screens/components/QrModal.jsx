@@ -73,6 +73,14 @@ function QrModal({ data, open, onClose, onAction }) {
             </div>
             <div className="popupSubtitle">Important</div>
             <div className="popupBox red" style={{ textAlign: "left" }}>
+              <b>Notice!!</b>
+              <br />
+              1 tx - 1 nft
+              <br />
+              3ada or 2ada + 100 million hoskytoken <br />
+              There is no limit to purchase by wallet.
+              <br />
+              <br />
               <b>Important</b>
               <br />
               It is minted randomly at all stages. <br />
@@ -82,12 +90,12 @@ function QrModal({ data, open, onClose, onAction }) {
               (Buyers should be careful of indiscriminate ADA shipments so that they are not suspected of being bots.){" "}
               <br />
               <br />
-              · The first stage sells 3,000 units. The price is 35ADA.
+              {/* · The first stage sells 3,000 units. The price is 35ADA.
               <br />
               · The second stage sells 3,000 units. The price is 40ADA.
               <br />
               · The last step, sells 4,000 units. The price is 45ADA.
-              <br />
+              <br /> */}
               (At this stage, we do not verify the bulk purchase of BOT.)
               <br />
             </div>
