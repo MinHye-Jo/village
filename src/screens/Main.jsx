@@ -75,7 +75,7 @@ function Main(props) {
       setS(
         Math.floor((distance % (1000 * 60)) / 1000) < 10
           ? `0${Math.floor((distance % (1000 * 60)) / 1000)}`
-          : Math.floor((distance % (1000 * 60)) / 1000)
+          : Math.floor((distance % (1000 * 60)) / 1000),
       );
     }, 1000);
   };
@@ -130,7 +130,7 @@ function Main(props) {
             <span>Cardano</span>Village
             <br />
             <div className="openTitle big">Chistmas Event</div>
-            <button className="btnBuy red" onClick={() => (window.location.href = "/eventChristmas")}>
+            <button className="btnBuy red" onClick={() => (window.location.href = "/EventChristmas")}>
               Buy Now!
             </button>
             {/* {!openFlag && (
