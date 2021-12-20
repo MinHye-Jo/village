@@ -75,7 +75,7 @@ function Main(props) {
       setS(
         Math.floor((distance % (1000 * 60)) / 1000) < 10
           ? `0${Math.floor((distance % (1000 * 60)) / 1000)}`
-          : Math.floor((distance % (1000 * 60)) / 1000),
+          : Math.floor((distance % (1000 * 60)) / 1000)
       );
     }, 1000);
   };
@@ -128,6 +128,11 @@ function Main(props) {
             <div className="mainLogo"></div>
             <br />
             <span>Cardano</span>Village
+            <br />
+            <div className="openTitle big">Chistmas Event</div>
+            <button className="btnBuy red" onClick={() => (window.location.href = "/eventChristmas")}>
+              Buy Now!
+            </button>
             {/* {!openFlag && (
               <div className="mainCount">
                 <div className="countTitle titleWhite">COMING SOON</div>
@@ -160,7 +165,7 @@ function Main(props) {
                 <div className="counterDate">December 10th 01PM (UTC)</div>
               </div>
             )} */}
-            {containData && containData.openStatus > 0 && (
+            {/* {containData && containData.openStatus > 0 && (
               <div className="openWrap">
                 {containData.openStatus == 5 || containData.openStatus == 6 ? (
                   <div className="openTitle">{containData.mintCount} Villages are sold.</div>
@@ -200,7 +205,7 @@ function Main(props) {
                   <button className="btnPreparing">{soldOut ? "SoldOut" : "Closed"}</button>
                 )}
               </div>
-            )}
+            )} */}
           </div>
         </div>
 
