@@ -2,11 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import "../styles/css/subpageTop.scss";
 import QrModal from "./components/QrModal";
 import { getAddress } from "../services/collection";
-
 function EventChristmas() {
   // 팝업제어
   const [qrOpen, setQrOpen] = useState(false);
   const [qrData, setQrData] = useState(false);
+  const [openFlag, setOpenFlag] = useState(false);
   // 구매 버튼 클릭
   const getAddressAction = async () => {
     const { data } = await getAddress({ addrName: "village" });
@@ -20,12 +20,11 @@ function EventChristmas() {
   };
   // 컬렉션 데이터
   const [containData] = useState(0);
-
-  const dday = new Date("December 23, 2021, 13:00:00"); //디데이
+  const openDday = new Date("December 20, 2021, 02:00:00"); //디데이
+  const dday = new Date("December 23, 2021, 02:00:00"); //디데이
   // UTC 타입 현재 날짜 (고정)
   const curr = new Date();
   const today = new Date(curr.getTime() + curr.getTimezoneOffset() * 60 * 1000);
-
   console.log(dday);
   console.log(today);
   // 카운트 제어
@@ -39,36 +38,34 @@ function EventChristmas() {
     (async () => {
       counter();
     })();
-
     return function cleanup() {
       clearInterval(countTimerRef.current);
     };
   }, []);
-
   // 메인 카운트다운
   const counter = () => {
     countTimerRef.current = setInterval(function () {
       const curr = new Date();
       const now = new Date(curr.getTime() + curr.getTimezoneOffset() * 60 * 1000);
-
       const distance = dday.getTime() - now;
-
+      const distance2 = openDday.getTime() - now;
+      if (distance2 <= 0) {
+        setOpenFlag(true);
+      }
       if (distance <= 0) {
         clearInterval(countTimerRef.current);
         return;
       }
-
       setD(Math.floor(distance / (1000 * 60 * 60 * 24)));
       setH(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
       setM(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
       setS(
         Math.floor((distance % (1000 * 60)) / 1000) < 10
           ? `0${Math.floor((distance % (1000 * 60)) / 1000)}`
-          : Math.floor((distance % (1000 * 60)) / 1000)
+          : Math.floor((distance % (1000 * 60)) / 1000),
       );
     }, 1000);
   };
-
   return (
     <div className="wrap">
       <QrModal data={qrData} open={qrOpen} onClose={() => setQrOpen(false)} />
@@ -96,7 +93,7 @@ function EventChristmas() {
               <div className="b">
                 Hi, Cardanian. <br /> Christmas has come to Cardano.
                 <br /> Thank you for supporting Cardano Village.
-                <br /> We hope our event will smile you.
+                <br /> We hope our event will make you smile.
               </div>
               <br />
               <br />
@@ -115,46 +112,51 @@ function EventChristmas() {
                 <br />
                 18f59066d205b9ffc4208d9b6cfad2dbdee84dc4a0097e0b9de7db26
               </div>
+              <br />
+              <div className="ecountTitle titleWhite">Period</div>
+              <div className="ecounterDate">December 20th 02AM to 23th 02AM (UTC)</div>
             </div>
           </div>
           <br />
-          <div className="row half">
-            <div className="eventText">
-              <div className="emainCount">
-                <div className="ecountTitle titleWhite">Close at</div>
-                <div className="ecounterDate">December 10th 01PM (UTC)</div>
-                <div className="ecounter">
-                  <div>
-                    <span className="edays" id="day">
-                      {d}
-                    </span>
-                    <div className="esmallText">Days</div>
-                  </div>
-                  <div>
-                    <span className="ehours" id="hour">
-                      {h}
-                    </span>
-                    <div className="esmallText">Hours</div>
-                  </div>
-                  <div>
-                    <span className="eminutes" id="minute">
-                      {m}
-                    </span>
-                    <div className="esmallText">Minutes</div>
-                  </div>
-                  <div>
-                    <span className="eseconds" id="second">
-                      {s}
-                    </span>
-                    <div className="esmallText">Seconds</div>
+          {openFlag && (
+            <div className="row half">
+              <div className="eventText">
+                <div className="emainCount">
+                  {/* <div className="ecountTitle titleWhite">Close at</div>
+                <div className="ecounterDate">December 10th 01PM (UTC)</div> */}
+                  <div className="ecounter">
+                    <div>
+                      <span className="edays" id="day">
+                        {d}
+                      </span>
+                      <div className="esmallText">Days</div>
+                    </div>
+                    <div>
+                      <span className="ehours" id="hour">
+                        {h}
+                      </span>
+                      <div className="esmallText">Hours</div>
+                    </div>
+                    <div>
+                      <span className="eminutes" id="minute">
+                        {m}
+                      </span>
+                      <div className="esmallText">Minutes</div>
+                    </div>
+                    <div>
+                      <span className="eseconds" id="second">
+                        {s}
+                      </span>
+                      <div className="esmallText">Seconds</div>
+                    </div>
                   </div>
                 </div>
+                <button className="btnEvent" onClick={getAddressAction}>
+                  BUY NOW!
+                </button>
               </div>
-              <button className="btnEvent" onClick={getAddressAction}>
-                BUY NOW!
-              </button>
             </div>
-          </div>
+          )}
         </div>
       </div>
       <div className="wrapDeepGreen">
@@ -205,5 +207,4 @@ function EventChristmas() {
     </div>
   );
 }
-
 export default EventChristmas;
